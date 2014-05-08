@@ -1,0 +1,41 @@
+\relax 
+\catcode`"\active
+\ifx\hyper@anchor\@undefined
+\global \let \oldcontentsline\contentsline
+\gdef \contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global \let \oldnewlabel\newlabel
+\gdef \newlabel#1#2{\newlabelxx{#1}#2}
+\gdef \newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\let \contentsline\oldcontentsline
+\let \newlabel\oldnewlabel}
+\else
+\global \let \hyper@last\relax 
+\fi
+
+\select@language{spanish}
+\@writefile{toc}{\select@language{spanish}}
+\@writefile{lof}{\select@language{spanish}}
+\@writefile{lot}{\select@language{spanish}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{3}{section.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Objetivos del documento}{3}{section.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Desarrollo}{3}{section.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Arquitectura general del sistema}{3}{subsection.3.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Paginacion y memoria virtual 1: Modelo de paginacion identity mapping para tierra y mar }{3}{subsection.3.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Paginacion y memoria virtual 2: Modelo de paginacion para la tarea y idle y las 8 tareas concurrentes }{3}{subsection.3.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Memory Managment Unit: Overview. Dise\IeC {\~n}o general y funcionalidades brindadas al kernel y a las tareas}{3}{subsection.3.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Interrupciones y Excepciones: Modelos de notificacion y penalizaciones por fallas algoritmicas}{3}{subsection.3.5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Interrupciones del sistema 1: Delegacion e integracion en dos niveles C assembler para brindar las interrupciones de software como servicios del sistema}{3}{subsection.3.6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Interrupciones del sistema 2: Implementacion. Integracion entre servicios del sistema y MMU. Mecanismos de notificacion}{3}{subsection.3.7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.8}Manejador de Contexto 1: Funcionalidades y controles delegados sobre este modulo}{3}{subsection.3.8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.9}Manejador de Contexto 2: Dise\IeC {\~n}o, Modelo de notificaciones en cascada por niveles de abstraccion}{3}{subsection.3.9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.10}Manejador de Contexto 3: Mecanismos de notificacion entre los diferentes modulos y su correcta integracion entre niveles}{4}{subsection.3.10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.11}Manejador de Contexto 4: Mecanismos de actualizacion de buffers de video, volcados parciales y totales a memoria de video de la pantalla seleccionada.}{4}{subsection.3.11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.12}Pantalla Estado: Division en Secciones: Banderas - Ultimo crash del sistema - Listado de informacion de paginacion. Mecanismos de actualizacion de informacion}{4}{subsection.3.12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.13}Pantalla Mapa: Tierra y Mar. Referencias del mapa. }{4}{subsection.3.13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.14}Manejador de Contexto 5: Estructuras de datos y algoritmos utilizados para calculo de intersecciones e identificacion de paginas mapeadas por las tareas.}{4}{subsection.3.14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.15}Barra de relojes: Dise\IeC {\~n}o. Modelo de notificaciones.}{4}{subsection.3.15}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.16}Tareas 1: Carga de tareas, Contexto de una tarea, Cambio de Contexto entre tareas y su implementacion. }{4}{subsection.3.16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.17}Tareas 2: Banderas. Identificacion de una tarea. Penalizacion de tiempo de scheduler en la llamada a bandera. Signal al sistema por interrupcion fin de bandera. Animacion de banderas}{4}{subsection.3.17}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.18}Tareas 3: Scheduler: Ejecucion concurrente de tareas. Turnos. Implementacion e integracion con Manejador de contexto.}{4}{subsection.3.18}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Conclusi\IeC {\'o}n}{4}{section.4}}
+\newlabel{LastPage}{{}{4}{}{page.4}{}}

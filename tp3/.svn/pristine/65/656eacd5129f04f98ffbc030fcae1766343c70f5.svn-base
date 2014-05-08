@@ -1,0 +1,6 @@
+Las 2 pantallas del sistema muestran todos los datos utilizados por el mismo y los movimientos de las tareas por el mar y sus anclas por la tierra. Esta parte de la funcionalidad del kernel solo conoce sobre posiciones de mapa, caracterizada por la cantidad de memoria de cada buffer de pantalla. La adecuacion de las posiciones se llevan a cabo en el Context Manager, el cual traduce las direcciones fisicas y virtuales en datos para mostrar en los distintos sectores de la pantalla.
+
+Las pantallas tienen en comun 2 secciones: el nombre de grupo en la parte superior, y la barra de relojes en la inferior. El nombre de grupo es seteado permanentemente al inicio del sistema, mientras que, por otro lado, los relojes son actualizados cada vez que una tarea corre.
+
+Todos los elementos dinamicos de las pantallas fuenron pensados para actualizarse por eventos de forma individual, para no tener que copiar todo el buffer de cada pantalla, cada vez que un reloj se movia. Cada sector responde a un evento el cual es delegado a traves del Context Manager a las secciones de manejo de Buffers.
+

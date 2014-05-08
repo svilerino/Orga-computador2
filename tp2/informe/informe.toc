@@ -1,0 +1,28 @@
+\select@language {spanish}
+\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{3}{section.1}
+\contentsline {section}{\numberline {2}Desarrollo}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Filtro Color}{3}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Descripci\IeC {\'o}n del algoritmo}{3}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Implementacion en assembler utilizando set de instrucciones SIMD}{5}{subsubsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.3}Optimizaciones y tecnicas especificas aplicadas a la implementacion con SIMD}{12}{subsubsection.2.1.3}
+\contentsline {subsubsection}{\numberline {2.1.4}Analisis y resultados}{13}{subsubsection.2.1.4}
+\contentsline {subsubsection}{\numberline {2.1.5}Tiempos de ejecucion de diferentes experimentos}{13}{subsubsection.2.1.5}
+\contentsline {subsubsection}{\numberline {2.1.6}Diferencias estructurales de las diferentes versiones analizadas}{15}{subsubsection.2.1.6}
+\contentsline {subsubsection}{\numberline {2.1.7}Conclusiones acerca de las mediciones}{16}{subsubsection.2.1.7}
+\contentsline {subsubsection}{\numberline {2.1.8}Aclaraciones especiales respecto a los tests del fcolor}{17}{subsubsection.2.1.8}
+\contentsline {subsection}{\numberline {2.2}Miniatura}{18}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Descripcion del algoritmo}{18}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Implementacion en C}{20}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}Implementacion en assembler utilizando set de instrucciones SIMD}{21}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.4}Detalle de procesamiento de filtrado de a 3 pixeles}{24}{subsubsection.2.2.4}
+\contentsline {subsubsection}{\numberline {2.2.5}C vs Assembler con SIMD}{26}{subsubsection.2.2.5}
+\contentsline {subsubsection}{\numberline {2.2.6}Tiempos de ejecucion de diferentes experimentos}{27}{subsubsection.2.2.6}
+\contentsline {subsubsection}{\numberline {2.2.7}Comentarios sobre los resultados obtenidos del experimento}{27}{subsubsection.2.2.7}
+\contentsline {subsection}{\numberline {2.3}Decode}{28}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Descripcion del algoritmo}{28}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Implementacion en assembler utilizando set de instrucciones SIMD}{29}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3}Analisis}{29}{subsubsection.2.3.3}
+\contentsline {subsubsection}{\numberline {2.3.4}Optimizaciones aplicadas al algoritmo}{33}{subsubsection.2.3.4}
+\contentsline {subsubsection}{\numberline {2.3.5}Analisis y rendimiento de las diferentes implementaciones}{34}{subsubsection.2.3.5}
+\contentsline {subsubsection}{\numberline {2.3.6}Conclusiones de los resultados}{35}{subsubsection.2.3.6}
+\contentsline {section}{\numberline {3}Conclusi\IeC {\'o}n}{35}{section.3}

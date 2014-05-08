@@ -1,0 +1,8 @@
+El kernel del videojuego cuenta con un separamiento en tres niveles. Por una parte se tiene todo lo que vendria a ser las funcionalidades del sistema: manejo de memoria, atencion a las interrupciones y excepciones; y lo que vendria a ser la interfaz con el usuario: la pantalla de estado y el mapa.\\
+
+Rehacer siguiendo los puntos de los jercicios del tp
+al inicio meter una introduccion de como quedo armada la secuencia de inicializacion del sistema, y despues otra para el ciclo del sistema
+
+Despues hacer una lista con los siguientespuntos a tratar.
+
+Para que no se haga repetitivo hay que juntar los puntos que traten de lo mismo, pero siempre siguiendo los puntows principales de los ejercicios.

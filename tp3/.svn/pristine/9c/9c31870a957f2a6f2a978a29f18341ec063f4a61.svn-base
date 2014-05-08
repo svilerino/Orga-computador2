@@ -1,0 +1,22 @@
+\BOOKMARK [1][-]{section.1}{Introducci\363n}{}
+\BOOKMARK [1][-]{section.2}{Objetivos del documento}{}
+\BOOKMARK [1][-]{section.3}{Desarrollo}{}
+\BOOKMARK [2][-]{subsection.3.1}{Arquitectura general del sistema}{section.3}
+\BOOKMARK [2][-]{subsection.3.2}{Paginacion y memoria virtual 1: Modelo de paginacion identity mapping para tierra y mar }{section.3}
+\BOOKMARK [2][-]{subsection.3.3}{Paginacion y memoria virtual 2: Modelo de paginacion para la tarea y idle y las 8 tareas concurrentes }{section.3}
+\BOOKMARK [2][-]{subsection.3.4}{Memory Managment Unit: Overview. Dise\361o general y funcionalidades brindadas al kernel y a las tareas}{section.3}
+\BOOKMARK [2][-]{subsection.3.5}{Interrupciones y Excepciones: Modelos de notificacion y penalizaciones por fallas algoritmicas}{section.3}
+\BOOKMARK [2][-]{subsection.3.6}{Interrupciones del sistema 1: Delegacion e integracion en dos niveles C assembler para brindar las interrupciones de software como servicios del sistema}{section.3}
+\BOOKMARK [2][-]{subsection.3.7}{Interrupciones del sistema 2: Implementacion. Integracion entre servicios del sistema y MMU. Mecanismos de notificacion}{section.3}
+\BOOKMARK [2][-]{subsection.3.8}{Manejador de Contexto 1: Funcionalidades y controles delegados sobre este modulo}{section.3}
+\BOOKMARK [2][-]{subsection.3.9}{Manejador de Contexto 2: Dise\361o, Modelo de notificaciones en cascada por niveles de abstraccion}{section.3}
+\BOOKMARK [2][-]{subsection.3.10}{Manejador de Contexto 3: Mecanismos de notificacion entre los diferentes modulos y su correcta integracion entre niveles}{section.3}
+\BOOKMARK [2][-]{subsection.3.11}{Manejador de Contexto 4: Mecanismos de actualizacion de buffers de video, volcados parciales y totales a memoria de video de la pantalla seleccionada.}{section.3}
+\BOOKMARK [2][-]{subsection.3.12}{Pantalla Estado: Division en Secciones: Banderas - Ultimo crash del sistema - Listado de informacion de paginacion. Mecanismos de actualizacion de informacion}{section.3}
+\BOOKMARK [2][-]{subsection.3.13}{Pantalla Mapa: Tierra y Mar. Referencias del mapa. }{section.3}
+\BOOKMARK [2][-]{subsection.3.14}{Manejador de Contexto 5: Estructuras de datos y algoritmos utilizados para calculo de intersecciones e identificacion de paginas mapeadas por las tareas.}{section.3}
+\BOOKMARK [2][-]{subsection.3.15}{Barra de relojes: Dise\361o. Modelo de notificaciones.}{section.3}
+\BOOKMARK [2][-]{subsection.3.16}{Tareas 1: Carga de tareas, Contexto de una tarea, Cambio de Contexto entre tareas y su implementacion. }{section.3}
+\BOOKMARK [2][-]{subsection.3.17}{Tareas 2: Banderas. Identificacion de una tarea. Penalizacion de tiempo de scheduler en la llamada a bandera. Signal al sistema por interrupcion fin de bandera. Animacion de banderas}{section.3}
+\BOOKMARK [2][-]{subsection.3.18}{Tareas 3: Scheduler: Ejecucion concurrente de tareas. Turnos. Implementacion e integracion con Manejador de contexto.}{section.3}
+\BOOKMARK [1][-]{section.4}{Conclusi\363n}{}

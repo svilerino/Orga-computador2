@@ -1,0 +1,72 @@
+--- # test concatenar
+crear: tipo 0. valor 15
+concatenar: nodo 0
+imprimir
+borrar
+
+--- # test concatenar 2
+crear: tipo 0. valor 10
+crear: tipo 0. valor 8
+concatenar: nodo 0
+concatenar: nodo 1
+imprimir
+borrar
+
+--- # test agregar hijo
+crear: tipo 0. valor 10
+crear: tipo 0. valor 8
+concatenar: nodo 0
+concatenar: nodo 1
+crear: tipo 0. valor 6
+ahijar: nodo 2 en columna 1
+imprimir
+borrar
+
+--- # test filtrar vacia
+filtrar: tipo 0
+imprimir
+borrar
+
+--- # test colapsar vacia
+colapsar: tipo 0
+imprimir
+borrar
+
+
+--- # test filtrar 1 elem
+crear: tipo 0. valor 10
+concatenar: nodo 0
+filtrar: tipo 0
+imprimir
+borrar
+
+--- # test colapsar 1 elem
+crear: tipo 0. valor 10
+concatenar: nodo 0
+colapsar: tipo 0
+imprimir: algo
+borrar
+
+
+--- # test mas largo
+crear: tipo 1. valor 10.35
+concatenar: nodo 0
+crear: tipo 1. valor 8.55
+concatenar: nodo 1
+crear: tipo 1. valor 6.3
+ahijar: nodo 2 en columna 1
+crear: tipo 1. valor 101.55
+crear: tipo 1. valor 82.45
+crear: tipo 1. valor 103.55
+crear: tipo 1. valor 83.55
+concatenar: nodo 6
+concatenar: nodo 5
+ahijar: nodo 4 en columna 3
+ahijar: nodo 3 en columna 1
+imprimir
+colapsar: tipo 1
+imprimir
+filtrar: tipo 1
+imprimir
+borrar
+

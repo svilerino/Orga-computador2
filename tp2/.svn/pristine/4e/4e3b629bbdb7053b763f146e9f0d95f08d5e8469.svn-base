@@ -1,0 +1,27 @@
+\BOOKMARK [1][-]{section.1}{Introducci\363n}{}
+\BOOKMARK [1][-]{section.2}{Desarrollo}{}
+\BOOKMARK [2][-]{subsection.2.1}{Filtro Color}{section.2}
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Descripci\363n del algoritmo}{subsection.2.1}
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Implementacion en assembler utilizando set de instrucciones SIMD}{subsection.2.1}
+\BOOKMARK [3][-]{subsubsection.2.1.3}{Optimizaciones y tecnicas especificas aplicadas a la implementacion con SIMD}{subsection.2.1}
+\BOOKMARK [3][-]{subsubsection.2.1.4}{Analisis y resultados}{subsection.2.1}
+\BOOKMARK [3][-]{subsubsection.2.1.5}{Tiempos de ejecucion de diferentes experimentos}{subsection.2.1}
+\BOOKMARK [3][-]{subsubsection.2.1.6}{Diferencias estructurales de las diferentes versiones analizadas}{subsection.2.1}
+\BOOKMARK [3][-]{subsubsection.2.1.7}{Conclusiones acerca de las mediciones}{subsection.2.1}
+\BOOKMARK [3][-]{subsubsection.2.1.8}{Aclaraciones especiales respecto a los tests del fcolor}{subsection.2.1}
+\BOOKMARK [2][-]{subsection.2.2}{Miniatura}{section.2}
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Descripcion del algoritmo}{subsection.2.2}
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Implementacion en C}{subsection.2.2}
+\BOOKMARK [3][-]{subsubsection.2.2.3}{Implementacion en assembler utilizando set de instrucciones SIMD}{subsection.2.2}
+\BOOKMARK [3][-]{subsubsection.2.2.4}{Detalle de procesamiento de filtrado de a 3 pixeles}{subsection.2.2}
+\BOOKMARK [3][-]{subsubsection.2.2.5}{C vs Assembler con SIMD}{subsection.2.2}
+\BOOKMARK [3][-]{subsubsection.2.2.6}{Tiempos de ejecucion de diferentes experimentos}{subsection.2.2}
+\BOOKMARK [3][-]{subsubsection.2.2.7}{Comentarios sobre los resultados obtenidos del experimento}{subsection.2.2}
+\BOOKMARK [2][-]{subsection.2.3}{Decode}{section.2}
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Descripcion del algoritmo}{subsection.2.3}
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Implementacion en assembler utilizando set de instrucciones SIMD}{subsection.2.3}
+\BOOKMARK [3][-]{subsubsection.2.3.3}{Analisis}{subsection.2.3}
+\BOOKMARK [3][-]{subsubsection.2.3.4}{Optimizaciones aplicadas al algoritmo}{subsection.2.3}
+\BOOKMARK [3][-]{subsubsection.2.3.5}{Analisis y rendimiento de las diferentes implementaciones}{subsection.2.3}
+\BOOKMARK [3][-]{subsubsection.2.3.6}{Conclusiones de los resultados}{subsection.2.3}
+\BOOKMARK [1][-]{section.3}{Conclusi\363n}{}

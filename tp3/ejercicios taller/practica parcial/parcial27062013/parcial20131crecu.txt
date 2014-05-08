@@ -1,0 +1,150 @@
+//  ej2.a
+		TSS : contendrá el contexto de ejecucion de la nueva tarea
+		GDT : se agrega el descriptor de tarea que apunta a la TSS anteriormente
+		IDT : para exportar el servicio como una interrupcion.
+		...?
+
+//	ej2.b
+
+	unsigned int LEVEL2_STACK=0;
+
+	void mmu_mapear_pagina_kernel(){
+		...
+	}
+
+	void mmu_mapear_pagina_kernel(){
+		...
+	}
+
+	unsigned short int dameLevel3CodeSegmentSelector(){
+		Gdt* gdt = gdt_base();
+		unsigned int index = 0;
+		for(index=0;index<8192;index++){
+			if(gdt[index].present == 1){
+				if( (gdt[index].type == CODESEGMENTTYPE) && (gdt[index].dpl == 3) ){
+					return index;
+				}
+			}
+		}
+	}
+
+	unsigned short int dameLevel3CodeSegmentSelector(){
+		Gdt* gdt = gdt_base();
+		unsigned int index = 0;
+		for(index=0;index<8192;index++){
+			if(gdt[index].present == 1){
+				if( (gdt[index].type == DATASEGMENTTYPE) && (gdt[index].dpl == 3) ){
+					return index;
+				}
+			}
+		}
+	}
+
+	void mmu_inicializar_tarea(unsigned int code_size){
+		//CLAVAR EL IDMAPPING DEL KERNEL de CODE_START y de la pila 0xBFFF0000
+		pageDir* pageDirPtr = mmu_dame_fisica_libre_kernel();//4096kb => justito 1024*4bytes que ocupan las entries de la pageDir
+
+		unsigned int idx = 0;
+
+		//asumo KERNEL_START y KERNEL_END alineadas a 4k
+		unsigned int kernel_size_in_pages = (KERNEL_END - KERNEL_START) >> 12;
+
+		//mapeo contiguamente todo el kernel con id mapping
+		for(idx=0;idx<kernel_size_in_pages;idx++){
+			mmu_mapear_pagina_kernel(pageDirPtr, KERNEL_START + 0x1000*idx, KERNEL_START + 0x1000*idx);
+		}	
+
+		//mapeo las paginas para el codigo
+		//asumo direcciones alineadas a 4k
+
+		unsigned int code_size_in_pages = code_size >> 12;
+
+		for(idx=0;idx<code_size_in_pages;idx++){
+			mmu_mapear_pagina_usuario(pageDirPtr, CODE_START+idx*0x1000, mmu_dame_fisica_libre_usuario());
+		}
+
+		//pila de nivel 3
+		mmu_mapear_pagina_usuario(pageDirPtr, 0xBFFF0000/*pila*/, mmu_dame_fisica_libre_usuario());
+
+		//pila de nivel 2 para syscalls
+		LEVEL2_STACK = mmu_dame_fisica_libre_kernel();
+		mmu_mapear_pagina_kernel(pageDir, LEVEL2_STACK, LEVEL2_STACK);//identity mapping
+
+	}
+
+	void crear_tarea(unsigned int code, unsigned int code_size){
+		//inicializo mapa de memoria completo para la tarea incluyendo la estructura integra de paginacion
+		pageDir* pageDirPtr = mmu_inicializar_tarea(code_size);
+		//inicializo la tss de la tarea nueva		
+		unsigned int asignedTssIndex = tss_inicializar_tarea(pageDirPtr);
+		//asigno un descriptor de tarea en la GDT para la tss creada
+		Tss* tssPtr = tss_base();
+		unsigned int schedTaskNumber = gdt_agregar_tss(&tssPtr[asignedTssIndex]);
+
+		//copiar codigo...
+		task_copiar_codigo(code/*src*/, CODE_START/*dst*/, code_size);
+
+		//agregar al sched...
+		sched_agregar_tarea(schedTaskNumber);
+
+	}
+
+	unsigned int gdt_agregar_tss(Tss* tssPtr){
+		unsigned int index = gdt_dame_indice_libre();
+		Gdt gdt = gdt_base();
+
+		gdt[index].limit = sizeof(*tssPtr) - 1;
+		gdt[index].base = tssPtr
+		gdt[index].type = 0x09;tss
+		gdt[index].s = 0;descriptor de sistema
+		gdt[index].dpl = 0x0;DPL 0
+		gdt[index].present = 1
+		...resto de los bits en 0...
+		return index;
+	}
+
+	unsigned int tss_inicializar_tarea(pageDir* taskContext){
+		unsigned int index = tss_dame_indice_libre();
+		Tss* res = tss_base();		
+
+		res[index].IOM = 0xFF;
+		res[index].CS = dameLevel3CodeSegmentSelector();
+		res[index].DS = dameLevel3DataSegmentSelector();
+		res[index].FS = dameLevel3DataSegmentSelector();
+		res[index].GS = dameLevel3DataSegmentSelector();
+		res[index].ES = dameLevel3DataSegmentSelector();
+		res[index].SS = dameLevel3DataSegmentSelector();
+		...registros de proposito general en 0
+		res[index].EFLAGS = 0x202
+		res[index].EIP = CODE_START
+		res[index].CR3 = taskContext
+		res[index].EBP = 0xBFFF0000
+		res[index].ESP = 0xBFFF0000
+		res[index].EBP2 = ...yao
+		res[index].ESP2 = ...yao
+		res[index].prevTaskLink = 0x0
+		...resto en cero...
+
+		return index;
+	}
+
+//  ej2.c
+	IDT entry
+	IDT[90].attr = present + DPL 10 + 32 bits
+	IDT[90].segsel = selector de segmento de codigo de nivel 0
+	IDT[90].offset0_15 = (unsigned short int) (&isr_90);
+	IDT[90].offset16_31 = (unsigned short int) ( (&isr_90) >> 16 );	
+
+	isr_90:	;llegan por pila los 2 parametros
+		pushad
+		pushfd
+
+			;offset es la cantidad de pushes*4 que hacen los comandos pushad y pushfd, estan en wikipedia y en el tp pero no los recuerdo.
+			push [esp + offset]
+			push [esp + offset + 4]			
+			call crear_tarea
+			sub esp, 8
+
+		popfd
+		popad
+		iret

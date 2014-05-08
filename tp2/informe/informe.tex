@@ -1,0 +1,343 @@
+\documentclass[a4paper,10pt,twoside]{article}
+
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-ucroman,es-noquoting]{babel}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{verbatim}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{algorithmic}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.97,0.97,0.97}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathreplacing}
+
+
+% Evita que el documento se estire verticalmente para ocupar
+% el espacio vacío en cada página.
+\raggedbottom
+
+
+%%%%%%%%%% Configuración de Fancyhdr - Inicio %%%%%%%%%%
+\pagestyle{fancy}
+\thispagestyle{fancy}
+\lhead{Trabajo Práctico 2, Organización del Computador II}
+\rhead{Chapresto, Rey, Vileriño}
+\renewcommand{\footrulewidth}{0.4pt}
+\cfoot{\thepage /\pageref{LastPage}}
+
+\fancypagestyle{caratula} {
+   \fancyhf{}
+   \cfoot{\thepage /\pageref{LastPage}}
+   \renewcommand{\headrulewidth}{0pt}
+   \renewcommand{\footrulewidth}{0pt}
+}
+%%%%%%%%%% Configuración de Fancyhdr - Fin %%%%%%%%%%
+
+
+%%%%%%%%%% Configuración de Algorithmic - Inicio %%%%%%%%%%
+% Entorno propio para customizar la presentación del pseudocódigo
+\newenvironment{pseudocodigo}
+    {\vspace{0.5em} \begin{algorithmic}}
+    {\end{algorithmic} \vspace{0.5em}}
+
+% Alinear comentarios a la derecha
+\renewcommand{\algorithmiccomment}[1]{\hfill \{#1\}}
+%%%%%%%%%% Configuración de Algorithmic - Fin %%%%%%%%%%
+
+
+%%%%%%%%%% Macros de tikz - Inicio %%%%%%%%%%
+% Uso: \registroCuatro{etiqueta}{x}{y}{a4}{a3}{a2}{a1}
+\newcommand{\registroCuatro}[7]{
+    \ifthenelse{\equal{#1}{}}{}{
+        \draw (#2, {#3 + 0.5}) node[anchor=east]{#1};
+    }
+
+    \draw   (#2, #3) rectangle +(4, 1) +(2, 0.5) node{#4}
+          ++(4, 0)   rectangle +(4, 1) +(2, 0.5) node{#5}
+          ++(4, 0)   rectangle +(4, 1) +(2, 0.5) node{#6}
+          ++(4, 0)   rectangle +(4, 1) +(2, 0.5) node{#7};          
+}
+
+% Uso: \registroOcho{etiqueta}{x}{y}{a8}{a7}{a6}...{a1}
+\newcommand{\registroOcho}[9]{
+    \def\etiqueta{#1}
+    \def\x{#2}
+    \def\y{#3}
+    \def\aviii{#4}
+    \def\avii{#5}
+    \def\avi{#6}
+    \def\av{#7}
+    \def\aiv{#8}
+    \def\aiii{#9}
+    \registroOchoX    
+}
+\newcommand{\registroOchoX}[2]{ % Auxiliar - no usar directamente
+    \def\aii{#1}
+    \def\ai{#2}
+    \ifthenelse{\equal{\etiqueta}{}}{}{
+        \draw (\x, {\y + 0.5}) node[anchor=east]{\etiqueta};
+    }
+    \filldraw[fill=white]
+        (\x, \y) rectangle +(2, 1) +(1, 0.5) node{\aviii}
+        ++(2, 0) rectangle +(2, 1) +(1, 0.5) node{\avii}
+        ++(2, 0) rectangle +(2, 1) +(1, 0.5) node{\avi}
+        ++(2, 0) rectangle +(2, 1) +(1, 0.5) node{\av}
+        ++(2, 0) rectangle +(2, 1) +(1, 0.5) node{\aiv}
+        ++(2, 0) rectangle +(2, 1) +(1, 0.5) node{\aiii}
+        ++(2, 0) rectangle +(2, 1) +(1, 0.5) node{\aii}
+        ++(2, 0) rectangle +(2, 1) +(1, 0.5) node{\ai};
+}
+
+
+% Uso: \registroDieciseis{etiqueta}{x}{y}{a16}{a15}{a14}...{a1}
+\newcommand{\registroDieciseis}[9]{
+    \def\etiqueta{#1}
+    \def\x{#2}
+    \def\y{#3}
+    \def\axvi{#4}
+    \def\axv{#5}
+    \def\axiv{#6}
+    \def\axiii{#7}
+    \def\axii{#8}
+    \def\axi{#9}
+    \registroDieciseisX
+}
+\newcommand{\registroDieciseisX}[9]{ % Auxiliar - no usar directamente
+    \def\ax{#1}
+    \def\aix{#2}
+    \def\aviii{#3}
+    \def\avii{#4}
+    \def\avi{#5}
+    \def\av{#6}
+    \def\aiv{#7}
+    \def\aiii{#8}
+    \def\aii{#9}
+    \registroDieciseisXX
+}
+\newcommand{\registroDieciseisXX}[1]{ % Auxiliar - no usar directamente
+    \def\ai{#1}
+    \ifthenelse{\equal{\etiqueta}{}}{}{
+        \draw (\x, {\y + 0.5}) node[anchor=east]{\etiqueta};
+    }
+    \filldraw[fill=white]
+        (\x, \y) rectangle +(1, 1) +(0.5, 0.5) node{\axvi}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\axv}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\axiv}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\axiii}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\axii}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\axi}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\ax}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\aix}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\aviii}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\avii}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\avi}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\av}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\aiv}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\aiii}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\aii}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\ai};
+}
+%%%%%%%%%% Macros de tikz - Fin %%%%%%%%%%
+
+
+%%%%%%%%%% Macros misceláneos - Inicio %%%%%%%%%%
+\newcommand{\xmm}[1]{\texttt{XMM#1}}
+\newcommand{\rax}{\texttt{RAX}}
+\newcommand{\rbx}{\texttt{RBX}}
+\newcommand{\rcx}{\texttt{RCX}}
+\newcommand{\rdx}{\texttt{RDX}}
+\newcommand{\rbp}{\texttt{RBP}}
+\newcommand{\rsp}{\texttt{RSP}}
+\newcommand{\reg}[1]{\texttt{R#1}}
+\newcommand{\asm}[1]{\texttt{\uppercase{#1}}}
+%%%%%%%%%% Macros misceláneos - Fin %%%%%%%%%%
+
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Carátula                                                                  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\thispagestyle{caratula}
+
+\begin{center}
+
+\includegraphics[height=2cm]{DC.png} 
+\hfill
+\includegraphics[height=2cm]{UBA.jpg} 
+
+\vspace{2cm}
+
+Departamento de Computación,\\
+Facultad de Ciencias Exactas y Naturales,\\
+Universidad de Buenos Aires
+
+\vspace{4cm}
+
+\begin{Huge}
+Trabajo Práctico 2
+\end{Huge}
+
+\vspace{0.5cm}
+
+\begin{Large}
+Organización del Computador II
+\end{Large}
+
+\vspace{1cm}
+
+Segundo Cuatrimestre de 2013
+
+\vspace{4cm}
+
+Grupo: \textbf{Crema Americana/Persico}
+
+\vspace{0.5cm}
+
+\begin{tabular}{|c|c|c|}
+    \hline
+    Apellido y Nombre & LU & E-mail\\
+    \hline
+    Silvio Vileriño             & 106/12 & svilerino@gmail.com\\
+    Esteban Rey 				& 657/10 & estebanlucianorey@gmail.com\\
+    Matias Chapresto 			& 201/12 & matiaschapresto@gmail.com\\
+    \hline
+\end{tabular}
+
+\vspace{1cm}
+
+\textbf{PC utilizada para las mediciones:} \\
+\vspace{0.cm}
+\begin{tabular}{|c|c|}
+    \hline
+    CPU &   Sandy Bridge Core i5-2500k @3.30Ghz\\
+    \hline
+    GPU & AMD Radeon 7800 HD\\
+    \hline
+    Mem.    &   8Gb Ddr3    \\
+    \hline
+\end{tabular}
+
+\end{center}
+
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Índice                                                                    %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\tableofcontents
+
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Introducción                                                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Introducción}
+El objetivo de este trabajo practico explorar y realizar experimentos sobre la tecnologia Streaming SIMD extensions provista por Intel que promete optimizar procesamientos que sean iguales para una cantidad multiple de datos.\\
+Con este objetivo en mente, realizaremos varias implementaciones de 3 filtros, 2 sobre videos y uno sobre imagenes, considerando una implementacion en lenguaje C y otra en lenguaje Assembler utilizando las instrucciones brindadas por el set de instrucciones SIMD. Esperamos obtener mejoras respecto a rendimiento. Realizaremos una serie de experimentos y analisis sobre cada filtro y a continuacion de estos escribiremos conclusiones sobre los datos obtenidos.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Desarrollo                                                                %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Desarrollo}
+
+\subsection{Filtro Color}
+
+\input{filtrocolor}
+
+\subsection{Miniatura}
+
+\input{miniatura}
+
+\subsection{Decode}
+
+\input{decode}
+
+
+%Guardo esta cosa turbia para hacer graficos por si acaso
+
+%\begin{figure}[H]
+%    \centering
+%    \begin{tikzpicture}[>=stealth]
+%        % Porcentajes
+%        \def\recortar  {6.43}
+%        \def\halftone  {6.64}
+%        \def\umbralizar{8.92}
+%        \def\colorizar {2.28}
+%        \def\plasma    {2.35}
+%        \def\rotar     {41.17}
+%
+%        \def\escala    {0.2}
+%
+%        % Recortar
+%        \filldraw[fill=gray] (1,    0) rectangle ++(1, {\recortar * \escala});
+%        \draw                (1.5,  0) node[anchor=north]{Recortar};
+%        \draw                (1.5, {\recortar * \escala}) node[anchor=south]{\recortar\%};
+
+%        % Halftone
+%        \filldraw[fill=gray] (3,    0) rectangle +(1, {\halftone * \escala});
+%        \draw                (3.5,  0) node[anchor=north]{Halftone};
+%        \draw                (3.5, {\halftone * \escala}) node[anchor=south]{\halftone\%};
+%
+%        % Umbralizar
+%        \filldraw[fill=gray] (5,    0) rectangle +(1, {\umbralizar * \escala});
+%        \draw                (5.5,  0) node[anchor=north]{Umbralizar};
+%        \draw                (5.5, {\umbralizar * \escala}) node[anchor=south]{\umbralizar\%};
+%
+%        % Colorizar
+%        \filldraw[fill=gray] (7,    0) rectangle +(1, {\colorizar * \escala});
+%        \draw                (7.5,  0) node[anchor=north]{Colorizar};
+%        \draw                (7.5, {\colorizar * \escala}) node[anchor=south]{\colorizar\%};
+
+%        % Plasma
+%        \filldraw[fill=gray] (9,    0) rectangle +(1, {\plasma * \escala});
+ %       \draw                (9.5,  0) node[anchor=north]{Plasma};
+  %      \draw                (9.5, {\plasma * \escala}) node[anchor=south]{\plasma\%};
+%
+ %       % Rotar
+  %      \filldraw[fill=gray] (11,   0) rectangle +(1, {\rotar * \escala});
+   %     \draw                (11.5, 0) node[anchor=north]{Rotar};
+    %    \draw                (11.5, {\rotar * \escala}) node[anchor=south]{\rotar\%};   
+%
+ %       % Ejes
+  %      \draw [->] (0, 0) -- +(0,  10);
+   %     \draw      (0, 0) -- +(13, 0);
+    %\end{tikzpicture}
+    %\caption{Tiempo de ejecución de las implementaciones assembler respecto a C.}
+%\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Conclusión                                                                %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Conclusión}
+Durante todo este trabajo, pudimos comprobar de forma empirica las ventajas que brindan las instrucciones del set SIMD provisto por Intel. A pesar de las optimizaciones brindadas por el compilador $GCC$ que mejoran de forma dramatica los resultados entre las implementaciones en C que no estan optimizadas y las versiones que si lo son, la paralelizacion de lectura y calculos para la aplicacion de los filtros, que en definitiva son procesamientos aritmeticos sobre matrices de numeros, redujeron la cantidad de ciclos requeridos para obtener un algoritmo que realice de forma correcta la transformacion impuesta por los diferentes filtros.\\
+Mas alla de estos resultados favorables obtenidos, algunas de las implementaciones de los filtros en assembler con instrucciones SIMD tuvieron que ser planteadas desde otro punto de vista para un mejor aprovechamiento del set de instrucciones a nuestro alcance, lo cual nos ocasiono varias trabas a lo largo del trabajo. Luego de obtener las primeras mediciones, se realizaron sucesivas optimizaciones sobre las implementaciones de los filtros, tanto en C como en Assembler, con el objetivo de ir disminuyendo la cantidad de ciclos consumidos por estos viendose esto reflejado en los analisis publicados en este informe.
+
+\end{document}

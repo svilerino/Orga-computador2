@@ -1,0 +1,14 @@
+{
+	"folders":
+	[
+		{
+			"path": "/home/svilerino/devel/repo-orga2so/tp1bundle"
+		}
+	],
+	     "settings":
+     {
+          "sublimegdb_workingdir": "${folder:${project_path:solucion/main}}",
+          "sublimegdb_commandline": "gdb --interpreter=mi ./main"
+          
+     }
+}

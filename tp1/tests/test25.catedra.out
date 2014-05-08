@@ -1,0 +1,100 @@
+antes   de colapsar { [ -16.272649 ][ 22.918415 ][ 47.824780 ] } { [ 50.685813 ] }
+despues de colapsar { [ -16.272649 ][ 22.918415 ][ 47.824780 ] } { [ 50.685813 ] }
+antes   de filtrar: { [ -16.272649 ][ 22.918415 ][ 47.824780 ] } { [ 50.685813 ] }
+despues de filtrar: { [ -16.272649 ][ 22.918415 ][ 47.824780 ] }
+antes   de colapsar { [ -16.272649 ][ 22.918415 ][ 47.824780 ] } { [ 44.291596 ][ 44.347709 ] } { [ 58.990526 ][ 56.740007 ][ 29.890398 ] } { [ 34.373070 ] } { [ -2.346698 ] } { [ 45.325850 ] } { [ 39.021178 ] }
+despues de colapsar { [ -16.272649 ][ 22.918415 ][ 47.824780 ] } { [ 44.291596 ][ 44.347709 ] } { [ 6.375595 ] } { [ 34.373070 ] } { [ -2.346698 ] } { [ 45.325850 ] } { [ 39.021178 ] }
+antes   de colapsar { [ -16.272649 ][ 22.918415 ][ 47.824780 ] } { [ 44.291596 ][ 44.347709 ] } { [ 6.375595 ] } { [ 34.373070 ] } { [ -2.346698 ] } { [ 45.325850 ] } { [ 39.021178 ] } { [ 11.725669 ] } { [ 41.436072 ] } { [ 50.049287 ] } { [ 53.274273 ] }
+despues de colapsar { [ -16.272649 ][ 22.918415 ][ 47.824780 ] } { [ 44.291596 ][ 44.347709 ] } { [ 6.375595 ] } { [ 34.373070 ] } { [ -2.346698 ] } { [ 45.325850 ] } { [ 39.021178 ] } { [ 11.725669 ] } { [ 41.436072 ] } { [ 50.049287 ] } { [ 53.274273 ] }
+antes   de filtrar: { [ -16.272649 ][ 22.918415 ][ 47.824780 ] } { [ 44.291596 ][ 44.347709 ] } { [ 6.375595 ] } { [ 34.373070 ] } { [ -2.346698 ] } { [ 45.325850 ] } { [ 39.021178 ] } { [ 11.725669 ] } { [ 41.436072 ] } { [ 50.049287 ][ 17.094537 ] } { [ 53.274273 ][ 26.404525 ] } { [ -4.849827 ][ -24.357568 ] } { [ 59.799997 ] } { [ 56.230757 ][ 29.848386 ] } { [ 49.649074 ] } { [ 19.503425 ] } { [ -24.812486 ] } { [ 56.640852 ] } { [ 17.522662 ][ -4.684512 ] } { [ 25.621555 ] } { [ 26.406708 ][ 44.942380 ] } { [ 65.364274 ] } { [ 54.864422 ] } { [ 35.496891 ] } { [ 2.251283 ] } { [ -17.613104 ] } { [ -8.575493 ] } { [ 69.692525 ] }
+despues de filtrar: { [ -16.272649 ][ 22.918415 ][ 47.824780 ] } { [ 44.291596 ][ 44.347709 ] } { [ 6.375595 ] } { [ 34.373070 ] } { [ -2.346698 ] } { [ 45.325850 ] } { [ 39.021178 ] } { [ 41.436072 ] } { [ 50.049287 ][ 17.094537 ] } { [ 53.274273 ][ 26.404525 ] } { [ 56.230757 ][ 29.848386 ] } { [ 26.406708 ][ 44.942380 ] } { [ 65.364274 ] } { [ 35.496891 ] } { [ 2.251283 ] }
+antes   de colapsar { [ -16.272649 ][ 22.918415 ][ 47.824780 ][ 40.593801 ] } { [ 44.291596 ][ 44.347709 ] } { [ 6.375595 ] } { [ 34.373070 ] } { [ -2.346698 ] } { [ 45.325850 ] } { [ 39.021178 ] } { [ 41.436072 ] } { [ 50.049287 ][ 17.094537 ] } { [ 53.274273 ][ 26.404525 ] } { [ 56.230757 ][ 29.848386 ] } { [ 26.406708 ][ 44.942380 ] } { [ 65.364274 ] } { [ 35.496891 ] } { [ 2.251283 ] } { [ -9.010455 ] } { [ 28.694027 ] } { [ 14.576315 ] } { [ 45.352708 ] } { [ 28.545015 ] }
+despues de colapsar { [ -16.272649 ][ 22.918415 ][ 47.824780 ][ 40.593801 ] } { [ 44.291596 ][ 44.347709 ] } { [ 6.375595 ] } { [ 34.373070 ] } { [ -2.346698 ] } { [ 45.325850 ] } { [ 39.021178 ] } { [ 41.436072 ] } { [ 50.049287 ][ 17.094537 ] } { [ 53.274273 ][ 26.404525 ] } { [ 56.230757 ][ 29.848386 ] } { [ 26.406708 ][ 44.942380 ] } { [ 65.364274 ] } { [ 35.496891 ] } { [ 2.251283 ] } { [ -9.010455 ] } { [ 28.694027 ] } { [ 14.576315 ] } { [ 45.352708 ] } { [ 28.545015 ] }
+antes   de colapsar { [ -16.272649 ][ 22.918415 ][ 47.824780 ][ 40.593801 ] } { [ 44.291596 ][ 44.347709 ] } { [ 6.375595 ] } { [ 34.373070 ] } { [ -2.346698 ] } { [ 45.325850 ] } { [ 39.021178 ] } { [ 41.436072 ] } { [ 50.049287 ][ 17.094537 ] } { [ 53.274273 ][ 26.404525 ] } { [ 56.230757 ][ 29.848386 ] } { [ 26.406708 ][ 44.942380 ] } { [ 65.364274 ] } { [ 35.496891 ] } { [ 2.251283 ] } { [ -9.010455 ] } { [ 28.694027 ] } { [ 14.576315 ] } { [ 45.352708 ] } { [ 28.545015 ] }
+despues de colapsar { [ -16.272649 ][ 22.918415 ][ 47.824780 ][ 40.593801 ] } { [ 44.291596 ][ 44.347709 ] } { [ 6.375595 ] } { [ 34.373070 ] } { [ -2.346698 ] } { [ 45.325850 ] } { [ 39.021178 ] } { [ 41.436072 ] } { [ 50.049287 ][ 17.094537 ] } { [ 53.274273 ][ 26.404525 ] } { [ 56.230757 ][ 29.848386 ] } { [ 26.406708 ][ 44.942380 ] } { [ 65.364274 ] } { [ 35.496891 ] } { [ 2.251283 ] } { [ -9.010455 ] } { [ 28.694027 ] } { [ 14.576315 ] } { [ 45.352708 ] } { [ 28.545015 ] }
+antes   de colapsar { [ -16.272649 ][ 22.918415 ][ 47.824780 ][ 40.593801 ] } { [ 44.291596 ][ 44.347709 ] } { [ 6.375595 ] } { [ 34.373070 ] } { [ -2.346698 ] } { [ 45.325850 ] } { [ 39.021178 ] } { [ 41.436072 ] } { [ 50.049287 ][ 17.094537 ] } { [ 53.274273 ][ 26.404525 ] } { [ 56.230757 ][ 29.848386 ] } { [ 26.406708 ][ 44.942380 ] } { [ 65.364274 ] } { [ 35.496891 ] } { [ 2.251283 ] } { [ -9.010455 ] } { [ 28.694027 ] } { [ 14.576315 ] } { [ 45.352708 ] } { [ 28.545015 ] }
+despues de colapsar { [ -16.272649 ][ 22.918415 ][ 47.824780 ][ 40.593801 ] } { [ 44.291596 ][ 44.347709 ] } { [ 6.375595 ] } { [ 34.373070 ] } { [ -2.346698 ] } { [ 45.325850 ] } { [ 39.021178 ] } { [ 41.436072 ] } { [ 50.049287 ][ 17.094537 ] } { [ 53.274273 ][ 26.404525 ] } { [ 56.230757 ][ 29.848386 ] } { [ 26.406708 ][ 44.942380 ] } { [ 65.364274 ] } { [ 35.496891 ] } { [ 2.251283 ] } { [ -9.010455 ] } { [ 28.694027 ] } { [ 14.576315 ] } { [ 45.352708 ] } { [ 28.545015 ] }
+antes   de colapsar { [ -16.272649 ][ 22.918415 ][ 47.824780 ][ 40.593801 ] } { [ 44.291596 ][ 44.347709 ] } { [ 6.375595 ] } { [ 34.373070 ] } { [ -2.346698 ] } { [ 45.325850 ][ 1.161957 ] } { [ 39.021178 ] } { [ 41.436072 ] } { [ 50.049287 ][ 17.094537 ] } { [ 53.274273 ][ 26.404525 ] } { [ 56.230757 ][ 29.848386 ] } { [ 26.406708 ][ 44.942380 ] } { [ 65.364274 ] } { [ 35.496891 ] } { [ 2.251283 ] } { [ -9.010455 ] } { [ 28.694027 ] } { [ 14.576315 ] } { [ 45.352708 ] } { [ 28.545015 ] }
+despues de colapsar { [ -16.272649 ][ 22.918415 ][ 47.824780 ][ 40.593801 ] } { [ 44.291596 ][ 44.347709 ] } { [ 6.375595 ] } { [ 34.373070 ] } { [ -2.346698 ] } { [ 45.325850 ][ 1.161957 ] } { [ 39.021178 ] } { [ 41.436072 ] } { [ 50.049287 ][ 17.094537 ] } { [ 53.274273 ][ 26.404525 ] } { [ 56.230757 ][ 29.848386 ] } { [ 26.406708 ][ 44.942380 ] } { [ 65.364274 ] } { [ 35.496891 ] } { [ 2.251283 ] } { [ -9.010455 ] } { [ 28.694027 ] } { [ 14.576315 ] } { [ 45.352708 ] } { [ 28.545015 ] }
+antes   de filtrar: { [ -16.272649 ][ 22.918415 ][ 47.824780 ][ 40.593801 ] } { [ 44.291596 ][ 44.347709 ] } { [ 6.375595 ] } { [ 34.373070 ] } { [ -2.346698 ] } { [ 45.325850 ][ 1.161957 ] } { [ 39.021178 ] } { [ 41.436072 ] } { [ 50.049287 ][ 17.094537 ] } { [ 53.274273 ][ 26.404525 ][ -16.764102 ] } { [ 56.230757 ][ 29.848386 ] } { [ 26.406708 ][ 44.942380 ] } { [ 65.364274 ] } { [ 35.496891 ] } { [ 2.251283 ] } { [ -9.010455 ] } { [ 28.694027 ] } { [ 14.576315 ] } { [ 45.352708 ] } { [ 28.545015 ] } { [ 42.600410 ] }
+despues de filtrar: { [ -16.272649 ][ 22.918415 ][ 47.824780 ][ 40.593801 ] } { [ 44.291596 ][ 44.347709 ] } { [ 6.375595 ] } { [ 34.373070 ] } { [ -2.346698 ] } { [ 45.325850 ][ 1.161957 ] } { [ 39.021178 ] } { [ 41.436072 ] } { [ 50.049287 ][ 17.094537 ] } { [ 53.274273 ][ 26.404525 ][ -16.764102 ] } { [ 56.230757 ][ 29.848386 ] } { [ 26.406708 ][ 44.942380 ] } { [ 65.364274 ] } { [ 35.496891 ] } { [ 2.251283 ] } { [ -9.010455 ] } { [ 45.352708 ] }
+antes   de filtrar: { [ qw2iw40f ] } { [ phg489o ] } { [ 2a ] }
+despues de filtrar: <vacia>
+antes   de colapsar { [ 9 ] } { [ vav2 ] } { [ 7 ][ 3s8ll ] } { [ d ] } { [ isqglxcowb ] } { [ ho9j ] } { [ inl ] }
+despues de colapsar { [ 9 ] } { [ vav2 ] } { [ 73s8ll ] } { [ d ] } { [ isqglxcowb ] } { [ ho9j ] } { [ inl ] }
+antes   de colapsar { [ 9 ] } { [ vav2 ] } { [ 73s8ll ] } { [ d ][ mkq ] } { [ isqglxcowb ] } { [ ho9j ] } { [ inl ] } { [ 8ooagnn ] }
+despues de colapsar { [ 9 ] } { [ vav2 ] } { [ 73s8ll ] } { [ d ][ mkq ] } { [ isqglxcowb ] } { [ ho9j ] } { [ inl ] } { [ 8ooagnn ] }
+antes   de colapsar { [ 9 ] } { [ vav2 ] } { [ 73s8ll ] } { [ d ][ mkq ] } { [ isqglxcowb ] } { [ ho9j ] } { [ inl ] } { [ 8ooagnn ] }
+despues de colapsar { [ 9 ] } { [ vav2 ] } { [ 73s8ll ] } { [ d ][ mkq ] } { [ isqglxcowb ] } { [ ho9j ] } { [ inl ] } { [ 8ooagnn ] }
+antes   de filtrar: { [ 9 ][ 16 ][ 1o8h ] } { [ vav2 ] } { [ 73s8ll ] } { [ d ][ mkq ] } { [ isqglxcowb ][ apw02b6t4 ] } { [ ho9j ] } { [ inl ] } { [ 8ooagnn ][ qguayp27ls ] } { [ wd0653wf ] } { [ tfuokiuh ] } { [ d26 ] } { [ w2vu4 ] } { [ eafm7mlm ] }
+despues de filtrar: { [ d ][ mkq ] } { [ isqglxcowb ][ apw02b6t4 ] } { [ inl ] } { [ tfuokiuh ] }
+antes   de filtrar: { [ d ][ mkq ] } { [ isqglxcowb ][ apw02b6t4 ] } { [ inl ] } { [ tfuokiuh ] }
+despues de filtrar: { [ d ][ mkq ] } { [ isqglxcowb ][ apw02b6t4 ] } { [ inl ] } { [ tfuokiuh ] }
+antes   de colapsar { [ d ][ mkq ] } { [ isqglxcowb ][ apw02b6t4 ] } { [ inl ][ l1twp ] } { [ tfuokiuh ] }
+despues de colapsar { [ d ][ mkq ] } { [ isqglxcowb ][ apw02b6t4 ] } { [ inl ][ l1twp ] } { [ tfuokiuh ] }
+antes   de colapsar { [ d ][ mkq ][ ailaj ] } { [ isqglxcowb ][ apw02b6t4 ][ ta9d39tbq ] } { [ inl ][ l1twp ][ 3 ] } { [ tfuokiuh ] } { [ 3y ] } { [ rof ] } { [ nmnjl3 ] } { [ 0lun ] } { [ 3cs ] } { [ hv8j ] } { [ aw1t ] } { [ baku ] }
+despues de colapsar { [ d ][ mkq ][ ailaj ] } { [ isqglxcowb ][ apw02b6t4 ][ ta9d39tbq ] } { [ inl ][ l1twp ][ 3 ] } { [ tfuokiuh ] } { [ 3y ] } { [ rof ] } { [ nmnjl3 ] } { [ 0lun ] } { [ 3cs ] } { [ hv8j ] } { [ aw1t ] } { [ baku ] }
+antes   de colapsar { [ d ][ mkq ][ ailaj ] } { [ isqglxcowb ][ apw02b6t4 ][ ta9d39tbq ] } { [ inl ][ l1twp ][ 3 ] } { [ tfuokiuh ] } { [ 3y ] } { [ rof ] } { [ nmnjl3 ] } { [ 0lun ] } { [ 3cs ] } { [ hv8j ] } { [ aw1t ] } { [ baku ] } { [ wbsg7u98 ] } { [ ij8s38w ] }
+despues de colapsar { [ d ][ mkq ][ ailaj ] } { [ isqglxcowb ][ apw02b6t4 ][ ta9d39tbq ] } { [ inl ][ l1twp ][ 3 ] } { [ tfuokiuh ] } { [ 3y ] } { [ rof ] } { [ nmnjl3 ] } { [ 0lun ] } { [ 3cs ] } { [ hv8j ] } { [ aw1t ] } { [ baku ] } { [ wbsg7u98 ] } { [ ij8s38w ] }
+antes   de colapsar { [ d ][ mkq ][ ailaj ] } { [ isqglxcowb ][ apw02b6t4 ][ ta9d39tbq ] } { [ inl ][ l1twp ][ 3 ] } { [ tfuokiuh ] } { [ 3y ] } { [ rof ] } { [ nmnjl3 ][ n6n ] } { [ 0lun ] } { [ 3cs ] } { [ hv8j ] } { [ aw1t ] } { [ baku ] } { [ wbsg7u98 ] } { [ ij8s38w ] } { [ d ] } { [ 93qr2qe ] } { [ o5eyn7wax ] } { [ rry8lro ] } { [ 2q21l ] }
+despues de colapsar { [ d ][ mkq ][ ailaj ] } { [ isqglxcowb ][ apw02b6t4 ][ ta9d39tbq ] } { [ inl ][ l1twp ][ 3 ] } { [ tfuokiuh ] } { [ 3y ] } { [ rof ] } { [ nnm6nnjl3 ] } { [ 0lun ] } { [ 3cs ] } { [ hv8j ] } { [ aw1t ] } { [ baku ] } { [ wbsg7u98 ] } { [ ij8s38w ] } { [ d ] } { [ 93qr2qe ] } { [ o5eyn7wax ] } { [ rry8lro ] } { [ 2q21l ] }
+antes   de colapsar <vacia>
+despues de colapsar <vacia>
+antes   de colapsar { [ xn ][ b88xpjier ] }
+despues de colapsar { [ xn ][ b88xpjier ] }
+antes   de filtrar: { [ xn ][ b88xpjier ] } { [ rdi ][ extr ] }
+despues de filtrar: { [ xn ][ b88xpjier ] } { [ rdi ][ extr ] }
+antes   de filtrar: { [ xn ][ b88xpjier ] } { [ rdi ][ extr ] } { [ flspd3i8j3 ] } { [ bl96tl59c ] } { [ bn0 ] } { [ fc6vsyg ] } { [ jr ] }
+despues de filtrar: { [ xn ][ b88xpjier ] } { [ rdi ][ extr ] } { [ jr ] }
+antes   de colapsar { [ xn ][ b88xpjier ] } { [ rdi ][ extr ] } { [ jr ][ yoox3tb ] } { [ l ] }
+despues de colapsar { [ xn ][ b88xpjier ] } { [ rdi ][ extr ] } { [ jr ][ yoox3tb ] } { [ l ] }
+antes   de colapsar { [ xn ][ b88xpjier ] } { [ rdi ][ extr ][ dlr8m ] } { [ jr ][ yoox3tb ] } { [ l ] }
+despues de colapsar { [ xn ][ b88xpjier ] } { [ rdi ][ extr ][ dlr8m ] } { [ jr ][ yoox3tb ] } { [ l ] }
+antes   de filtrar: { [ xn ][ b88xpjier ] } { [ rdi ][ extr ][ dlr8m ][ w23fo9edg ] } { [ jr ][ yoox3tb ][ 1n6m ] } { [ l ] } { [ o8j38 ] } { [ crlmdr ][ p ] } { [ mh4 ] } { [ 0y5jesdci ] } { [ t ] } { [ g0kghuleai ] } { [ 16bu ] } { [ tne68f ][ fwl ] } { [ 9h1r2li ] } { [ mkg ] } { [ x ] } { [ y ] } { [ wyknxyt ] } { [ 2fuqp1 ] } { [ 4549ae8 ][ pjplj ] } { [ hu16on335 ] } { [ yfqarfq03 ] } { [ 7c005vd29 ] } { [ rhi99lq ] } { [ k3219c3 ] } { [ 6giycfin0 ] } { [ 01khw31j ] }
+despues de filtrar: { [ xn ][ b88xpjier ] } { [ rdi ][ extr ][ dlr8m ][ w23fo9edg ] } { [ jr ][ yoox3tb ][ 1n6m ] } { [ l ] } { [ crlmdr ][ p ] } { [ t ] } { [ mkg ] } { [ x ] } { [ y ] } { [ wyknxyt ] }
+antes   de colapsar { [ xn ][ b88xpjier ] } { [ rdi ][ extr ][ dlr8m ][ w23fo9edg ] } { [ jr ][ yoox3tb ][ 1n6m ] } { [ l ] } { [ crlmdr ][ p ] } { [ t ] } { [ mkg ] } { [ x ] } { [ y ] } { [ wyknxyt ] }
+despues de colapsar { [ xn ][ b88xpjier ] } { [ rdi ][ extr ][ dlr8m ][ w23fo9edg ] } { [ jr ][ yoox3tb ][ 1n6m ] } { [ l ] } { [ crlmdr ][ p ] } { [ t ] } { [ mkg ] } { [ x ] } { [ y ] } { [ wyknxyt ] }
+antes   de colapsar { [ xn ][ b88xpjier ] } { [ rdi ][ extr ][ dlr8m ][ w23fo9edg ] } { [ jr ][ yoox3tb ][ 1n6m ] } { [ l ] } { [ crlmdr ][ p ] } { [ t ] } { [ mkg ] } { [ x ] } { [ y ] } { [ wyknxyt ] }
+despues de colapsar { [ xn ][ b88xpjier ] } { [ rdi ][ extr ][ dlr8m ][ w23fo9edg ] } { [ jr ][ yoox3tb ][ 1n6m ] } { [ l ] } { [ crlmdr ][ p ] } { [ t ] } { [ mkg ] } { [ x ] } { [ y ] } { [ wyknxyt ] }
+antes   de colapsar { [ xn ][ b88xpjier ] } { [ rdi ][ extr ][ dlr8m ][ w23fo9edg ] } { [ jr ][ yoox3tb ][ 1n6m ] } { [ l ] } { [ crlmdr ][ p ] } { [ t ][ ftsgvs8l8 ] } { [ mkg ][ glj7 ] } { [ x ] } { [ y ] } { [ wyknxyt ] } { [ 2pxv ] } { [ k ][ 2 ][ jmx0pq1mm ] } { [ et ][ 4d6e ] } { [ w7m ] } { [ 6ghyg ] } { [ urd3 ] }
+despues de colapsar { [ xn ][ b88xpjier ] } { [ rdi ][ extr ][ dlr8m ][ w23fo9edg ] } { [ jr ][ yoox3tb ][ 1n6m ] } { [ l ] } { [ crlmdr ][ p ] } { [ t ][ ftsgvs8l8 ] } { [ mkg ][ glj7 ] } { [ x ] } { [ y ] } { [ wyknxyt ] } { [ 2pxv ] } { [ k ][ 2 ][ jmx0pq1mm ] } { [ et ][ 4d6e ] } { [ w7m ] } { [ 6ghyg ] } { [ urd3 ] }
+antes   de colapsar { [ 7rytnhs ] } { [ v ][ 3yf2akeir ] } { [ f1wc983l6h ] } { [ 96u ] }
+despues de colapsar { [ 7rytnhs ] } { [ v ][ 3yf2akeir ] } { [ f1wc983l6h ] } { [ 96u ] }
+antes   de colapsar { [ 7rytnhs ] } { [ v ][ 3yf2akeir ] } { [ f1wc983l6h ] } { [ 96u ] }
+despues de colapsar { [ 7rytnhs ] } { [ v ][ 3yf2akeir ] } { [ f1wc983l6h ] } { [ 96u ] }
+antes   de colapsar { [ 7rytnhs ] } { [ v ][ 3yf2akeir ] } { [ f1wc983l6h ] } { [ 96u ] } { [ ypt6lomucj ] }
+despues de colapsar { [ 7rytnhs ] } { [ v ][ 3yf2akeir ] } { [ f1wc983l6h ] } { [ 96u ] } { [ ypt6lomucj ] }
+antes   de colapsar { [ 7rytnhs ] } { [ v ][ 3yf2akeir ] } { [ f1wc983l6h ] } { [ 96u ] } { [ ypt6lomucj ] }
+despues de colapsar { [ 7rytnhs ] } { [ v ][ 3yf2akeir ] } { [ f1wc983l6h ] } { [ 96u ] } { [ ypt6lomucj ] }
+antes   de filtrar: { [ 7rytnhs ] } { [ v ][ 3yf2akeir ] } { [ f1wc983l6h ][ txtm0br ] } { [ 96u ] } { [ ypt6lomucj ] } { [ eaoip0kl ][ mv ][ 1fl ] } { [ 5s25e ][ 3oelav5 ] } { [ 58 ] }
+despues de filtrar: { [ v ][ 3yf2akeir ] }
+antes   de colapsar { [ v ][ 3yf2akeir ] } { [ 8f5 ][ yb8 ] } { [ vdd9067v ] }
+despues de colapsar { [ v ][ 3yf2akeir ] } { [ 8yfb58 ] } { [ vdd9067v ] }
+antes   de filtrar: { [ v ][ 3yf2akeir ][ kf9r ] } { [ 8yfb58 ] } { [ vdd9067v ] } { [ 5ids ] } { [ nc2g9w556 ] }
+despues de filtrar: { [ v ][ 3yf2akeir ][ kf9r ] }
+antes   de filtrar: { [ v ][ 3yf2akeir ][ kf9r ] } { [ jysum9hrm ] } { [ uo3yufm2au ][ xllqkf ] } { [ f ] } { [ rpv4 ] } { [ hmejmo ] }
+despues de filtrar: { [ v ][ 3yf2akeir ][ kf9r ] } { [ f ] } { [ hmejmo ] }
+antes   de colapsar { [ v ][ 3yf2akeir ][ kf9r ] } { [ f ] } { [ hmejmo ] } { [ dr ] } { [ 7 ] }
+despues de colapsar { [ v ][ 3yf2akeir ][ kf9r ] } { [ f ] } { [ hmejmo ] } { [ dr ] } { [ 7 ] }
+antes   de colapsar { [ v ][ 3yf2akeir ][ kf9r ] } { [ f ] } { [ hmejmo ] } { [ dr ][ 3no ] } { [ 7 ][ 6y123g ] } { [ nvrju ][ ca ][ 0 ] } { [ nnodkt ][ xgpit8os ][ 9n340i ] } { [ 3 ] } { [ mcnluxeo ] } { [ 3u84x1wg ] } { [ iys ] } { [ kfyer ] } { [ 0l7 ] } { [ lcuaimu2w ] } { [ u0i ] } { [ mr ] } { [ s ] } { [ y6lia ] } { [ 7xtag49d7 ] } { [ ox7i0rwukv ] }
+despues de colapsar { [ v ][ 3yf2akeir ][ kf9r ] } { [ f ] } { [ hmejmo ] } { [ dr ][ 3no ] } { [ 76y123g ] } { [ nvrju ][ ca ][ 0 ] } { [ nnodkt ][ xgpit8os ][ 9n340i ] } { [ 3 ] } { [ mcnluxeo ] } { [ 3u84x1wg ] } { [ iys ] } { [ kfyer ] } { [ 0l7 ] } { [ lcuaimu2w ] } { [ u0i ] } { [ mr ] } { [ s ] } { [ y6lia ] } { [ 7xtag49d7 ] } { [ ox7i0rwukv ] }
+antes   de colapsar { [ y ] }
+despues de colapsar { [ y ] }
+antes   de filtrar: { [ y ] } { [ u6y8 ][ 510y ] } { [ vdxp7b ] } { [ 9abal ][ 62q96s2 ] } { [ rgrrirf ] }
+despues de filtrar: { [ y ] } { [ rgrrirf ] }
+antes   de colapsar { [ y ] } { [ rgrrirf ][ j ] } { [ 5mj ] }
+despues de colapsar { [ y ] } { [ rgrrirf ][ j ] } { [ 5mj ] }
+antes   de colapsar { [ y ] } { [ rgrrirf ][ j ][ 8i9u1mp ] } { [ 5mj ] } { [ q2tmo ] }
+despues de colapsar { [ y ] } { [ rgrrirf ][ j ][ 8i9u1mp ] } { [ 5mj ] } { [ q2tmo ] }
+antes   de colapsar { [ y ] } { [ rgrrirf ][ j ][ 8i9u1mp ] } { [ 5mj ] } { [ q2tmo ] } { [ 1obw ] } { [ 97sm6aqhiv ] }
+despues de colapsar { [ y ] } { [ rgrrirf ][ j ][ 8i9u1mp ] } { [ 5mj ] } { [ q2tmo ] } { [ 1obw ] } { [ 97sm6aqhiv ] }
+antes   de colapsar { [ y ] } { [ rgrrirf ][ j ][ 8i9u1mp ] } { [ 5mj ] } { [ q2tmo ][ 092tsbft ][ 1iv0gor5 ][ oeqtpcv7e ] } { [ 1obw ] } { [ 97sm6aqhiv ] } { [ c ] } { [ byp2 ] } { [ b ] } { [ cuxcelv ] } { [ fc ] } { [ ci833u5a9m ] } { [ ekj ] } { [ fju9qelm4 ] } { [ 3htasnq ] } { [ 4y1yt ] } { [ 8a ] } { [ ymkk99 ] } { [ h ] }
+despues de colapsar { [ y ] } { [ rgrrirf ][ j ][ 8i9u1mp ] } { [ 5mj ] } { [ qo1e0qit2p ] } { [ 1obw ] } { [ 97sm6aqhiv ] } { [ c ] } { [ byp2 ] } { [ b ] } { [ cuxcelv ] } { [ fc ] } { [ ci833u5a9m ] } { [ ekj ] } { [ fju9qelm4 ] } { [ 3htasnq ] } { [ 4y1yt ] } { [ 8a ] } { [ ymkk99 ] } { [ h ] }
+antes   de filtrar: { [ y ] } { [ rgrrirf ][ j ][ 8i9u1mp ] } { [ 5mj ] } { [ qo1e0qit2p ] } { [ 1obw ] } { [ 97sm6aqhiv ] } { [ c ] } { [ byp2 ][ jpkd ] } { [ b ] } { [ cuxcelv ] } { [ fc ] } { [ ci833u5a9m ] } { [ ekj ] } { [ fju9qelm4 ] } { [ 3htasnq ] } { [ 4y1yt ] } { [ 8a ] } { [ ymkk99 ] } { [ h ] } { [ 29kb3l ] } { [ lc28x0pe9 ] }
+despues de filtrar: { [ y ] } { [ rgrrirf ][ j ][ 8i9u1mp ] } { [ c ] } { [ b ] } { [ cuxcelv ] } { [ fc ] } { [ ekj ] } { [ h ] }
+antes   de colapsar { [ y ] } { [ rgrrirf ][ j ][ 8i9u1mp ] } { [ c ] } { [ b ] } { [ cuxcelv ] } { [ fc ] } { [ ekj ] } { [ h ][ leg ] } { [ ty00 ][ n ] } { [ mjessb4 ] } { [ eogek2r ] } { [ faa9sadblj ] }
+despues de colapsar { [ y ] } { [ rgrrirf ][ j ][ 8i9u1mp ] } { [ c ] } { [ b ] } { [ cuxcelv ] } { [ fc ] } { [ ekj ] } { [ h ][ leg ] } { [ tny00 ] } { [ mjessb4 ] } { [ eogek2r ] } { [ faa9sadblj ] }
+antes   de filtrar: { [ y ][ q ][ pfefa6u ] } { [ rgrrirf ][ j ][ 8i9u1mp ] } { [ c ] } { [ b ] } { [ cuxcelv ] } { [ fc ] } { [ ekj ] } { [ h ][ leg ] } { [ tny00 ] } { [ mjessb4 ] } { [ eogek2r ] } { [ faa9sadblj ][ c8ce0gq5g ] } { [ 7 ] } { [ 6ecagxll ] } { [ vxu ] } { [ saj02v ] }
+despues de filtrar: { [ y ][ q ][ pfefa6u ] } { [ rgrrirf ][ j ][ 8i9u1mp ] } { [ c ] } { [ b ] } { [ cuxcelv ] } { [ fc ] } { [ ekj ] } { [ h ][ leg ] } { [ vxu ] }
+antes   de colapsar { [ y ][ q ][ pfefa6u ][ sx2sl ] } { [ rgrrirf ][ j ][ 8i9u1mp ] } { [ c ] } { [ b ] } { [ cuxcelv ] } { [ fc ] } { [ ekj ] } { [ h ][ leg ] } { [ vxu ] } { [ l5 ] } { [ vcrjg9 ] } { [ m ] }
+despues de colapsar { [ y ][ q ][ pfefa6u ][ sx2sl ] } { [ rgrrirf ][ j ][ 8i9u1mp ] } { [ c ] } { [ b ] } { [ cuxcelv ] } { [ fc ] } { [ ekj ] } { [ h ][ leg ] } { [ vxu ] } { [ l5 ] } { [ vcrjg9 ] } { [ m ] }

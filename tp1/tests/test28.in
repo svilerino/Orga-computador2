@@ -1,0 +1,660 @@
+--- test 0 de 50
+crear: tipo 1. valor 30.844567
+crear: tipo 1. valor 4.455005
+crear: tipo 1. valor 5.367986
+crear: tipo 1. valor 37.470104
+crear: tipo 1. valor 8.814885
+ahijar: nodo 1 en columna 6
+imprimir: antes   de colapsar
+colapsar: tipo 1
+imprimir: despues de colapsar
+crear: tipo 1. valor 14.071031
+crear: tipo 1. valor 51.266507
+crear: tipo 1. valor 22.152767
+crear: tipo 1. valor 60.852610
+ahijar: nodo 8 en columna 18
+crear: tipo 1. valor -9.815400
+imprimir: antes   de filtrar:
+filtrar: tipo 1
+imprimir: despues de filtrar:
+crear: tipo 1. valor 36.409955
+crear: tipo 1. valor -20.272321
+ahijar: nodo 3 en columna 37
+concatenar: nodo 7
+concatenar: nodo 6
+crear: tipo 1. valor 52.611146
+crear: tipo 1. valor 12.473758
+crear: tipo 1. valor 29.558136
+concatenar: nodo 11
+ahijar: nodo 2 en columna 49
+concatenar: nodo 4
+imprimir: antes   de colapsar
+colapsar: tipo 1
+imprimir: despues de colapsar
+concatenar: nodo 13
+imprimir: antes   de filtrar:
+filtrar: tipo 1
+imprimir: despues de filtrar:
+crear: tipo 1. valor -17.315284
+crear: tipo 1. valor 39.557232
+concatenar: nodo 12
+crear: tipo 1. valor -14.579235
+ahijar: nodo 15 en columna 29
+crear: tipo 1. valor 7.562378
+crear: tipo 1. valor 44.477611
+concatenar: nodo 14
+concatenar: nodo 9
+concatenar: nodo 17
+concatenar: nodo 18
+crear: tipo 1. valor 71.341252
+concatenar: nodo 16
+concatenar: nodo 5
+crear: tipo 1. valor 29.978410
+concatenar: nodo 21
+concatenar: nodo 10
+concatenar: nodo 0
+crear: tipo 1. valor 50.127113
+imprimir: antes   de filtrar:
+filtrar: tipo 1
+imprimir: despues de filtrar:
+crear: tipo 1. valor 53.876900
+imprimir: antes   de colapsar
+colapsar: tipo 1
+imprimir: despues de colapsar
+crear: tipo 1. valor 33.355424
+crear: tipo 1. valor 63.736273
+concatenar: nodo 22
+crear: tipo 1. valor 49.921792
+crear: tipo 1. valor 6.029482
+crear: tipo 1. valor 42.483666
+crear: tipo 1. valor -3.033748
+ahijar: nodo 23 en columna 15
+crear: tipo 1. valor 19.303173
+concatenar: nodo 26
+concatenar: nodo 25
+crear: tipo 1. valor -20.063407
+crear: tipo 1. valor 8.009275
+concatenar: nodo 27
+concatenar: nodo 29
+crear: tipo 1. valor 70.383555
+concatenar: nodo 19
+crear: tipo 1. valor -24.567085
+concatenar: nodo 32
+concatenar: nodo 28
+ahijar: nodo 30 en columna 1
+concatenar: nodo 24
+concatenar: nodo 33
+concatenar: nodo 31
+imprimir: antes   de colapsar
+colapsar: tipo 1
+imprimir: despues de colapsar
+concatenar: nodo 20
+concatenar: nodo 34
+crear: tipo 1. valor -4.079999
+crear: tipo 1. valor -24.627604
+ahijar: nodo 36 en columna 38
+crear: tipo 1. valor 3.508952
+concatenar: nodo 37
+crear: tipo 1. valor 31.000671
+crear: tipo 1. valor 44.416980
+crear: tipo 1. valor 11.247806
+crear: tipo 1. valor -18.805716
+concatenar: nodo 41
+crear: tipo 1. valor 40.449049
+ahijar: nodo 35 en columna 21
+imprimir: antes   de colapsar
+colapsar: tipo 1
+imprimir: despues de colapsar
+ahijar: nodo 38 en columna 41
+crear: tipo 1. valor 53.593269
+ahijar: nodo 43 en columna 7
+imprimir: antes   de colapsar
+colapsar: tipo 1
+imprimir: despues de colapsar
+crear: tipo 1. valor -22.878660
+crear: tipo 1. valor 33.264994
+crear: tipo 1. valor 45.671322
+concatenar: nodo 46
+concatenar: nodo 42
+ahijar: nodo 44 en columna 41
+crear: tipo 1. valor -15.048256
+crear: tipo 1. valor 10.753932
+crear: tipo 1. valor 62.598851
+ahijar: nodo 47 en columna 33
+concatenar: nodo 45
+ahijar: nodo 49 en columna 28
+concatenar: nodo 48
+imprimir: antes   de colapsar
+colapsar: tipo 1
+imprimir: despues de colapsar
+concatenar: nodo 40
+ahijar: nodo 39 en columna 21
+borrar
+--- test 1 de 50
+crear: tipo 1. valor 70.469358
+crear: tipo 1. valor 34.889902
+concatenar: nodo 0
+ahijar: nodo 1 en columna 46
+crear: tipo 1. valor 65.436400
+crear: tipo 1. valor 41.535153
+crear: tipo 1. valor 21.345799
+crear: tipo 1. valor 17.963344
+crear: tipo 1. valor 63.729201
+crear: tipo 1. valor 57.895041
+crear: tipo 1. valor -20.512671
+imprimir: antes   de colapsar
+colapsar: tipo 1
+imprimir: despues de colapsar
+imprimir: antes   de colapsar
+colapsar: tipo 1
+imprimir: despues de colapsar
+concatenar: nodo 4
+concatenar: nodo 7
+concatenar: nodo 6
+ahijar: nodo 8 en columna 42
+crear: tipo 1. valor 58.968146
+ahijar: nodo 5 en columna 9
+crear: tipo 1. valor -15.904151
+concatenar: nodo 3
+crear: tipo 1. valor 54.134740
+concatenar: nodo 2
+crear: tipo 1. valor -5.772880
+concatenar: nodo 11
+imprimir: antes   de colapsar
+colapsar: tipo 1
+imprimir: despues de colapsar
+ahijar: nodo 12 en columna 25
+ahijar: nodo 10 en columna 37
+imprimir: antes   de colapsar
+colapsar: tipo 1
+imprimir: despues de colapsar
+crear: tipo 1. valor -16.605439
+concatenar: nodo 13
+crear: tipo 1. valor 63.882262
+concatenar: nodo 9
+ahijar: nodo 14 en columna 5
+crear: tipo 1. valor 69.228484
+concatenar: nodo 15
+crear: tipo 1. valor -16.620628
+ahijar: nodo 16 en columna 3
+crear: tipo 1. valor 41.825627
+crear: tipo 1. valor 54.132874
+crear: tipo 1. valor 50.529556
+crear: tipo 1. valor -7.082645
+concatenar: nodo 19
+crear: tipo 1. valor 65.679340
+crear: tipo 1. valor 13.856429
+concatenar: nodo 20
+concatenar: nodo 21
+crear: tipo 1. valor 26.929366
+crear: tipo 1. valor 59.376896
+crear: tipo 1. valor -4.349709
+crear: tipo 1. valor 74.011868
+crear: tipo 1. valor 2.704052
+concatenar: nodo 23
+concatenar: nodo 24
+concatenar: nodo 17
+ahijar: nodo 18 en columna 17
+crear: tipo 1. valor 34.872679
+crear: tipo 1. valor -13.961086
+concatenar: nodo 28
+crear: tipo 1. valor 63.542331
+concatenar: nodo 25
+crear: tipo 1. valor 32.695588
+ahijar: nodo 27 en columna 7
+ahijar: nodo 31 en columna 28
+concatenar: nodo 29
+crear: tipo 1. valor 61.224345
+concatenar: nodo 32
+concatenar: nodo 26
+crear: tipo 1. valor -19.102088
+concatenar: nodo 30
+concatenar: nodo 33
+imprimir: antes   de filtrar:
+filtrar: tipo 1
+imprimir: despues de filtrar:
+crear: tipo 1. valor -5.196064
+concatenar: nodo 34
+concatenar: nodo 22
+crear: tipo 1. valor 33.026317
+crear: tipo 1. valor 34.202661
+concatenar: nodo 35
+imprimir: antes   de filtrar:
+filtrar: tipo 1
+imprimir: despues de filtrar:
+crear: tipo 1. valor 74.839301
+imprimir: antes   de filtrar:
+filtrar: tipo 1
+imprimir: despues de filtrar:
+ahijar: nodo 37 en columna 43
+crear: tipo 1. valor -20.308923
+ahijar: nodo 36 en columna 8
+crear: tipo 1. valor 73.426126
+concatenar: nodo 39
+ahijar: nodo 38 en columna 24
+crear: tipo 1. valor 60.049544
+crear: tipo 1. valor 24.178842
+crear: tipo 1. valor -14.171789
+concatenar: nodo 42
+concatenar: nodo 40
+crear: tipo 1. valor -12.047488
+concatenar: nodo 41
+crear: tipo 1. valor 3.002709
+imprimir: antes   de colapsar
+colapsar: tipo 1
+imprimir: despues de colapsar
+concatenar: nodo 44
+concatenar: nodo 43
+crear: tipo 1. valor -0.154992
+crear: tipo 1. valor 56.072082
+ahijar: nodo 45 en columna 37
+imprimir: antes   de colapsar
+colapsar: tipo 1
+imprimir: despues de colapsar
+crear: tipo 1. valor -15.286979
+crear: tipo 1. valor 62.604630
+crear: tipo 1. valor -12.357072
+concatenar: nodo 46
+concatenar: nodo 47
+concatenar: nodo 48
+ahijar: nodo 49 en columna 42
+imprimir: antes   de colapsar
+colapsar: tipo 1
+imprimir: despues de colapsar
+borrar
+--- test 2 de 50
+crear: tipo 2. valor ri4ek2cy
+crear: tipo 2. valor 7u
+concatenar: nodo 0
+imprimir: antes   de colapsar
+colapsar: tipo 2
+imprimir: despues de colapsar
+crear: tipo 2. valor mulxbqweh
+ahijar: nodo 2 en columna 21
+concatenar: nodo 1
+crear: tipo 2. valor au7
+concatenar: nodo 3
+crear: tipo 2. valor jhct
+ahijar: nodo 4 en columna 26
+crear: tipo 2. valor j0
+concatenar: nodo 5
+imprimir: antes   de filtrar:
+filtrar: tipo 2
+imprimir: despues de filtrar:
+crear: tipo 2. valor 2
+crear: tipo 2. valor 9gr6pspq
+concatenar: nodo 6
+crear: tipo 2. valor v2v4
+ahijar: nodo 8 en columna 47
+crear: tipo 2. valor n
+concatenar: nodo 7
+concatenar: nodo 9
+crear: tipo 2. valor niljx
+crear: tipo 2. valor 2x
+ahijar: nodo 10 en columna 34
+crear: tipo 2. valor 8ygx
+crear: tipo 2. valor b02ocgd
+imprimir: antes   de colapsar
+colapsar: tipo 2
+imprimir: despues de colapsar
+ahijar: nodo 11 en columna 40
+concatenar: nodo 13
+crear: tipo 2. valor 37hmr6qggp
+crear: tipo 2. valor 63b754x8a
+crear: tipo 2. valor dpn2ukv
+concatenar: nodo 14
+crear: tipo 2. valor 1
+crear: tipo 2. valor m7widxs
+concatenar: nodo 15
+concatenar: nodo 17
+crear: tipo 2. valor co
+crear: tipo 2. valor ed2v7cu
+crear: tipo 2. valor iyoglxjm
+crear: tipo 2. valor mqnxhpc
+imprimir: antes   de colapsar
+colapsar: tipo 2
+imprimir: despues de colapsar
+concatenar: nodo 16
+crear: tipo 2. valor n
+concatenar: nodo 23
+crear: tipo 2. valor k
+ahijar: nodo 12 en columna 2
+concatenar: nodo 20
+crear: tipo 2. valor anthc
+ahijar: nodo 22 en columna 14
+crear: tipo 2. valor xkn5kdyuh1
+imprimir: antes   de colapsar
+colapsar: tipo 2
+imprimir: despues de colapsar
+concatenar: nodo 21
+concatenar: nodo 25
+imprimir: antes   de colapsar
+colapsar: tipo 2
+imprimir: despues de colapsar
+crear: tipo 2. valor g8qtxa1
+ahijar: nodo 26 en columna 33
+imprimir: antes   de filtrar:
+filtrar: tipo 2
+imprimir: despues de filtrar:
+concatenar: nodo 19
+crear: tipo 2. valor 9wpk0qhkhp
+crear: tipo 2. valor x
+crear: tipo 2. valor qe0ee3h
+concatenar: nodo 30
+crear: tipo 2. valor 7jru
+crear: tipo 2. valor 4yj
+concatenar: nodo 18
+crear: tipo 2. valor oywvf2xki4
+ahijar: nodo 27 en columna 39
+concatenar: nodo 28
+crear: tipo 2. valor axpqxjf7x
+crear: tipo 2. valor 7d5ubmy
+crear: tipo 2. valor tqlswpb14n
+crear: tipo 2. valor o5aytvbcte
+crear: tipo 2. valor vf
+ahijar: nodo 33 en columna 4
+concatenar: nodo 36
+concatenar: nodo 35
+crear: tipo 2. valor 3
+imprimir: antes   de colapsar
+colapsar: tipo 2
+imprimir: despues de colapsar
+concatenar: nodo 39
+crear: tipo 2. valor lgia
+crear: tipo 2. valor ec4n
+ahijar: nodo 31 en columna 25
+crear: tipo 2. valor 2ba5bo
+crear: tipo 2. valor ppdna1tu1v
+imprimir: antes   de colapsar
+colapsar: tipo 2
+imprimir: despues de colapsar
+ahijar: nodo 41 en columna 49
+crear: tipo 2. valor yl20jy
+crear: tipo 2. valor blp109s
+crear: tipo 2. valor fg3
+crear: tipo 2. valor 3o4
+ahijar: nodo 46 en columna 31
+ahijar: nodo 47 en columna 48
+concatenar: nodo 42
+concatenar: nodo 38
+concatenar: nodo 32
+crear: tipo 2. valor by7u4y4l
+crear: tipo 2. valor f1s785w76
+concatenar: nodo 49
+concatenar: nodo 37
+concatenar: nodo 29
+concatenar: nodo 48
+concatenar: nodo 43
+imprimir: antes   de filtrar:
+filtrar: tipo 2
+imprimir: despues de filtrar:
+concatenar: nodo 24
+concatenar: nodo 45
+concatenar: nodo 40
+concatenar: nodo 34
+ahijar: nodo 44 en columna 42
+borrar
+--- test 3 de 50
+crear: tipo 1. valor 20.731938
+crear: tipo 1. valor 36.256199
+imprimir: antes   de colapsar
+colapsar: tipo 1
+imprimir: despues de colapsar
+crear: tipo 1. valor -5.293872
+ahijar: nodo 2 en columna 2
+ahijar: nodo 0 en columna 48
+crear: tipo 1. valor 63.948324
+concatenar: nodo 1
+crear: tipo 1. valor -8.432306
+crear: tipo 1. valor 23.429459
+crear: tipo 1. valor -7.232663
+imprimir: antes   de colapsar
+colapsar: tipo 1
+imprimir: despues de colapsar
+ahijar: nodo 5 en columna 38
+crear: tipo 1. valor -7.019878
+concatenar: nodo 6
+crear: tipo 1. valor 25.574448
+concatenar: nodo 7
+concatenar: nodo 8
+crear: tipo 1. valor -16.189171
+crear: tipo 1. valor 64.374228
+crear: tipo 1. valor -16.433829
+crear: tipo 1. valor 36.515214
+concatenar: nodo 3
+concatenar: nodo 9
+crear: tipo 1. valor 73.637483
+crear: tipo 1. valor 37.662431
+crear: tipo 1. valor -23.743671
+concatenar: nodo 11
+crear: tipo 1. valor 42.811194
+imprimir: antes   de colapsar
+colapsar: tipo 1
+imprimir: despues de colapsar
+crear: tipo 1. valor 31.151194
+ahijar: nodo 16 en columna 21
+crear: tipo 1. valor -8.534577
+crear: tipo 1. valor -20.060594
+crear: tipo 1. valor -20.358828
+concatenar: nodo 19
+crear: tipo 1. valor 39.222595
+crear: tipo 1. valor -16.733609
+crear: tipo 1. valor -7.200852
+imprimir: antes   de colapsar
+colapsar: tipo 1
+imprimir: despues de colapsar
+crear: tipo 1. valor 18.072529
+crear: tipo 1. valor 63.973663
+concatenar: nodo 22
+ahijar: nodo 21 en columna 11
+concatenar: nodo 20
+crear: tipo 1. valor 50.636340
+crear: tipo 1. valor 37.956956
+concatenar: nodo 26
+ahijar: nodo 18 en columna 41
+crear: tipo 1. valor 57.488255
+concatenar: nodo 10
+imprimir: antes   de colapsar
+colapsar: tipo 1
+imprimir: despues de colapsar
+crear: tipo 1. valor -20.636072
+ahijar: nodo 29 en columna 40
+ahijar: nodo 12 en columna 34
+concatenar: nodo 24
+ahijar: nodo 28 en columna 44
+concatenar: nodo 25
+concatenar: nodo 4
+concatenar: nodo 27
+crear: tipo 1. valor -10.876837
+crear: tipo 1. valor -20.300257
+crear: tipo 1. valor 72.011052
+concatenar: nodo 14
+concatenar: nodo 30
+ahijar: nodo 31 en columna 39
+crear: tipo 1. valor 50.698233
+imprimir: antes   de filtrar:
+filtrar: tipo 1
+imprimir: despues de filtrar:
+crear: tipo 1. valor 73.842976
+concatenar: nodo 32
+crear: tipo 1. valor 37.753302
+crear: tipo 1. valor 68.749637
+crear: tipo 1. valor 50.954334
+concatenar: nodo 36
+ahijar: nodo 34 en columna 28
+crear: tipo 1. valor 34.304072
+concatenar: nodo 37
+imprimir: antes   de colapsar
+colapsar: tipo 1
+imprimir: despues de colapsar
+concatenar: nodo 35
+concatenar: nodo 33
+crear: tipo 1. valor -17.518989
+concatenar: nodo 39
+crear: tipo 1. valor 4.620354
+crear: tipo 1. valor -20.385455
+concatenar: nodo 15
+crear: tipo 1. valor 47.191498
+concatenar: nodo 40
+imprimir: antes   de filtrar:
+filtrar: tipo 1
+imprimir: despues de filtrar:
+concatenar: nodo 17
+concatenar: nodo 13
+crear: tipo 1. valor 68.257763
+crear: tipo 1. valor 63.650460
+crear: tipo 1. valor -7.583182
+imprimir: antes   de colapsar
+colapsar: tipo 1
+imprimir: despues de colapsar
+concatenar: nodo 42
+crear: tipo 1. valor -13.041654
+crear: tipo 1. valor 47.577859
+crear: tipo 1. valor 27.509478
+concatenar: nodo 38
+crear: tipo 1. valor -16.024819
+ahijar: nodo 23 en columna 36
+ahijar: nodo 48 en columna 45
+ahijar: nodo 44 en columna 43
+concatenar: nodo 41
+concatenar: nodo 46
+concatenar: nodo 43
+concatenar: nodo 47
+concatenar: nodo 49
+ahijar: nodo 45 en columna 17
+imprimir: antes   de filtrar:
+filtrar: tipo 1
+imprimir: despues de filtrar:
+borrar
+--- test 4 de 50
+crear: tipo 0. valor 1927
+crear: tipo 0. valor -4248
+imprimir: antes   de colapsar
+colapsar: tipo 0
+imprimir: despues de colapsar
+concatenar: nodo 0
+crear: tipo 0. valor 4697
+imprimir: antes   de colapsar
+colapsar: tipo 0
+imprimir: despues de colapsar
+crear: tipo 0. valor 1760
+concatenar: nodo 3
+concatenar: nodo 2
+crear: tipo 0. valor -4735
+concatenar: nodo 1
+crear: tipo 0. valor -1128
+concatenar: nodo 5
+concatenar: nodo 4
+crear: tipo 0. valor 1747
+ahijar: nodo 6 en columna 4
+imprimir: antes   de colapsar
+colapsar: tipo 0
+imprimir: despues de colapsar
+crear: tipo 0. valor 99
+concatenar: nodo 7
+crear: tipo 0. valor -469
+crear: tipo 0. valor -2941
+ahijar: nodo 9 en columna 10
+concatenar: nodo 8
+crear: tipo 0. valor 4324
+concatenar: nodo 10
+crear: tipo 0. valor -2374
+concatenar: nodo 11
+crear: tipo 0. valor -1642
+crear: tipo 0. valor -1375
+crear: tipo 0. valor -3452
+crear: tipo 0. valor -3754
+concatenar: nodo 12
+crear: tipo 0. valor -2430
+imprimir: antes   de filtrar:
+filtrar: tipo 0
+imprimir: despues de filtrar:
+concatenar: nodo 14
+concatenar: nodo 16
+imprimir: antes   de colapsar
+colapsar: tipo 0
+imprimir: despues de colapsar
+concatenar: nodo 13
+ahijar: nodo 15 en columna 34
+crear: tipo 0. valor 3410
+concatenar: nodo 17
+crear: tipo 0. valor -861
+crear: tipo 0. valor -3189
+crear: tipo 0. valor 2630
+crear: tipo 0. valor 4581
+crear: tipo 0. valor 3287
+ahijar: nodo 22 en columna 14
+ahijar: nodo 19 en columna 42
+ahijar: nodo 20 en columna 2
+crear: tipo 0. valor -2100
+imprimir: antes   de colapsar
+colapsar: tipo 0
+imprimir: despues de colapsar
+crear: tipo 0. valor -2147
+imprimir: antes   de filtrar:
+filtrar: tipo 0
+imprimir: despues de filtrar:
+ahijar: nodo 18 en columna 5
+concatenar: nodo 23
+concatenar: nodo 24
+concatenar: nodo 21
+crear: tipo 0. valor 2488
+crear: tipo 0. valor -3406
+crear: tipo 0. valor 1928
+concatenar: nodo 26
+concatenar: nodo 27
+ahijar: nodo 25 en columna 30
+crear: tipo 0. valor 1524
+crear: tipo 0. valor 1516
+crear: tipo 0. valor -2880
+crear: tipo 0. valor -626
+crear: tipo 0. valor -3007
+crear: tipo 0. valor -3519
+ahijar: nodo 29 en columna 49
+crear: tipo 0. valor 2044
+concatenar: nodo 33
+crear: tipo 0. valor -2233
+crear: tipo 0. valor -2646
+concatenar: nodo 34
+ahijar: nodo 32 en columna 39
+imprimir: antes   de colapsar
+colapsar: tipo 0
+imprimir: despues de colapsar
+crear: tipo 0. valor -4454
+imprimir: antes   de filtrar:
+filtrar: tipo 0
+imprimir: despues de filtrar:
+concatenar: nodo 31
+crear: tipo 0. valor 3781
+crear: tipo 0. valor -2750
+crear: tipo 0. valor -4501
+concatenar: nodo 37
+crear: tipo 0. valor 3927
+concatenar: nodo 41
+crear: tipo 0. valor 1460
+concatenar: nodo 36
+crear: tipo 0. valor -3101
+ahijar: nodo 30 en columna 6
+crear: tipo 0. valor 3481
+crear: tipo 0. valor 4833
+crear: tipo 0. valor -4819
+concatenar: nodo 40
+crear: tipo 0. valor 3677
+concatenar: nodo 42
+crear: tipo 0. valor 3667
+crear: tipo 0. valor -1093
+concatenar: nodo 49
+ahijar: nodo 43 en columna 29
+concatenar: nodo 35
+concatenar: nodo 39
+ahijar: nodo 28 en columna 40
+concatenar: nodo 46
+ahijar: nodo 44 en columna 24
+concatenar: nodo 38
+concatenar: nodo 47
+imprimir: antes   de colapsar
+colapsar: tipo 0
+imprimir: despues de colapsar
+concatenar: nodo 48
+ahijar: nodo 45 en columna 34
+borrar

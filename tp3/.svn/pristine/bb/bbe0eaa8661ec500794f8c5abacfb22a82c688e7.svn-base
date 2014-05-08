@@ -1,0 +1,410 @@
+ej1.1
+
+//gdt "macro"
+.base = 
+		.limit(tiene 20 bits) = 
+		.type = 
+		.s =
+		.DPL =
+		.P =
+		.AVL =
+		.L = 
+		.D/B = 
+		.G =
+}
+
+
+	GTD = {
+			[0] = 0x0;//toda nula por proteccion.
+			[3] = {
+					.base = 0x00100000 //1mb => 1024kb => 1048576bytes => to hex => 0x00100000
+					.limit(tiene 20 bits) =  0x002FF//ultimo offset direccionable . 3mb*1024 = 3072kb/4kb => 768 -1 => 0x2FF
+					.type = 0x0A // execute / read
+					.s = 1 //descriptor type code or data
+					.DPL = 01 //level 1
+					.P = 1 //present in ram
+					.AVL = 0 //available for system programmer
+					.L = 0 //64bit mode only.
+					.D/B = 1 //32 bits
+					.G = 1 //el limite se mide en 4kbytes.
+			},
+			[6] = {
+					.base = 0x00100000 //10kb => 10240bytes => to hex => 0x00002800
+					.limit(tiene 20 bits) = 0x00000000 //ultimo offset direccionable . 1 byte-1 = 0
+					.type = 0x02 // data / read write
+					.s = 1 //descriptor type code or data
+					.DPL = 00 //level 0
+					.P = 1 //present in ram
+					.AVL = 0 //available for system programmer
+					.L = 0 //64bit mode only.
+					.D/B = 1 //32 bits
+					.G = 0 //el limite se mide en bytes.
+			},
+			[9] = {
+					.base = 0x00000000 //0kb
+					.limit(tiene 20 bits) = 0xDFFFF //ultimo offset direccionable . 3.5gb  => 3584mb => 3670016 kbytes /4kb => 917504 - 1 => 0xDFFFF
+					.type = 0x08 // code / execute only
+					.s = 1 //descriptor type code or data
+					.DPL = 11 //level 3
+					.P = 1 //present in ram
+					.AVL = 0 //available for system programmer
+					.L = 0 //64bit mode only.
+					.D/B = 1 //32 bits
+					.G = 1 //el limite se mide en 4kbytes.
+			},
+			[14] = {
+					.base = 0x80000000 //2gb => 2147483648 -1 bytes => toHex => 0x80000000
+					.limit(tiene 20 bits) = 0x7FFFF //ultimo offset direccionable . 2gb  => 2048mb => 2097152 kbytes /4kb => 524288 - 1 => 0x7FFFF
+					.type = 0x02 // data / read write
+					.s = 1 //descriptor type code or data
+					.DPL = 11 //level 3
+					.P = 1 //present in ram
+					.AVL = 0 //available for system programmer
+					.L = 0 //64bit mode only.
+					.D/B = 1 //32 bits
+					.G = 1 //el limite se mide en 4kbytes.
+			}
+
+	};
+
+ej1.2
+	DirTable -> 1024 entries for PageTables
+	PageTable -> 1024 entries for 4k page each one
+	total de 4096mb
+
+			linear							physic
+1	0x00002800 a 0x00004800	 		0x00019000 a 0x0001B800
+2	0x00000000 a 0x00001800			0xC0000000 a 0xC0001800
+
+
+rango 1:
+
+tengo que mapear paginas alineadas a 4k. entonces el rango 1 se va a convertir en 
+
+			linear							physic
+1	0x00002000 a 0x00004FFF	 		0x00019000 a 0x0001BFFF
+
+de forma que se mapeen paginas virtuales a fisicas de la siguiente manera:
+{0x00002000, 0x00003000, 0x00004000} -> {0x00019000, 0x0001A000, 0x0001B000}
+
+indices de las estructuras:
+	*	0x00002000 => pd: 0 ; pt = 2 ; offset 0x000
+	*	0x00003000 => pd: 0 ; pt = 3 ; offset 0x000
+	*	0x00004000 => pd: 0 ; pt = 4 ; offset 0x000
+
+inicializo las estructuras de paginacion y seteo los rangos:
+	1.  pongo en not present y el resto de los bits en 0 en las 1024 entradas del directorio de paginas
+
+	2.  pongo en not present y el resto de los bits en 0 en las 1024 entradas de la unica
+		tabla de paginas que voy a usar, notar que el indice de la pdir es el mismo en todas las paginas virtuales (cero)
+
+	3.	seteo en el directorio de paginas en el indice 0 - dado que todas las virtuales usan este indice - 
+		una entrada que apunta a una tabla de paginas con los permisos correspondientes
+
+	4.	seteo 3 entradas contiguas - por los indices que utilizan las virtuales - en la tabla de paginas, 
+		con los permisos correspondientes mapeando las 3 paginas fisicas correspondientes
+
+
+pageDir = {
+	fstPageDirEntry = {
+		.present = 1
+		.readWrite = 1
+		.userSupervisor = 1 //user
+		.pageBase = (&fstPageTable) >> 12; alineado a 4k
+		... resto de los bits en 0 ...
+	}
+	... resto en 0x0 de 1 a 1023 ...
+}
+
+fstPageTable = {
+	... rango 2 de 0 a 1 ...
+	[2] = {
+		.present = 1
+		.readWrite = 1
+		.userSupervisor = 1//user
+		.pageBase = 0x19; alineado a 4k
+		... resto de los bits en 0 ...
+	},
+	[3] = {
+		.present = 1
+		.readWrite = 1
+		.userSupervisor = 1//user
+		.pageBase = 0x1A; alineado a 4k
+		... resto de los bits en 0 ...
+	},
+	[4] = {
+		.present = 1
+		.readWrite = 1
+		.userSupervisor = 1//user
+		.pageBase = 0x1B; alineado a 4k
+		... resto de los bits en 0 ...
+	}
+	... resto en 0x0 de 5 a 1023 ...
+}
+
+;----------------------------------------------------------------------------------------------------------
+
+rango 2:
+
+tengo que mapear paginas alineadas a 4k. entonces el rango 2 se va a convertir en 
+
+			linear							physic
+2	0x00000000 a 0x00001800			0xC0000000 a 0xC0001800
+
+de forma que se mapeen paginas virtuales a fisicas de la siguiente manera:
+{0x00000000, 0x00001000} -> {0xC0000000, 0xC0001000}
+
+indices de las estructuras:
+	*	0x00000000 => pd: 0 ; pt = 0 ; offset 0x000
+	*	0x00001000 => pd: 0 ; pt = 1 ; offset 0x000
+
+;agrego al pagtable del rango 1 los indices
+fstPageTable = {
+	[0] = {
+		.present = 1
+		.readWrite = 1
+		.userSupervisor = 1//user
+		.pageBase = 0xC0000; alineado a 4k
+		... resto de los bits en 0 ...
+	},
+	[1] = {
+		.present = 1
+		.readWrite = 1
+		.userSupervisor = 1//user
+		.pageBase = 0xC0001; alineado a 4k
+		... resto de los bits en 0 ...
+	},
+	... entradas del rango 1 ...
+	... resto en 0x0 de 5 a 1023 ...
+}
+
+;----------------------------------------------------------------------------------------------------------
+
+ej1.3
+	0x004B : 0x00000001 - CPL 11 - lectura
+
+	segsel:
+		RPL = 11 = 3d
+		LDT/GDT = GDT
+		offset = 1001 = 9d
+
+	accede al segmento de privilegio 3d sin problemas pero es un segmento de codigo solo ejecutable, la lectura hace #GP en la unidad de segmentacion
+	
+	suponiendo que accediera bien la proteccion, agarra la base del segmento (0x0) y le suma el offset 0xC0000001, hay que ver si esta adentro del rango del limite del segmento.
+	esto es sii offset <= limite o offset <= limite << 3 si la granularidad esta en 4k
+	limite 0xDFFFF << 3 => 0xDFFFF000. con lo cual 0xC0000001 <= 0xDFFFF000 es valido.
+	
+
+;------------------------------------------------------------------------------------------------------------	
+
+	0x0030 : 0x00100000 - CPL 00 - lectura
+
+	segsel:
+		RPL = 00 = 0d
+		LDT/GDT = GDT
+		offset = 0110 = 6d
+
+	accede al segmento de privilegio 0d correctamente y es un segmento de datos escritura y lectura, la unidad de segmentacion da el OK en la proteccion.
+	ahora agarra la base del segmento ( 10Kb ) y le suma el offset 0x00100000 = 1048576 bytes. explota porque el limit es 0x0. tira excepcion la unidad de segmentacion
+
+	
+;------------------------------------------------------------------------------------------------------------	
+
+	0x001A : 0x00000400 - CPL 01 - lectura
+
+	segsel:
+		RPL = 10 = 2d
+		LDT/GDT = GDT
+		offset = 11 = 3d
+
+	privilegios: el CPL es 01, el RPL es 10, el EPL = MAX(RPL, CPL) = 10 = 2d
+	cuando compara EPL vs DPL, explota con #GP
+
+	
+	proteccion, el offset es 0x400 bytes y el limit es 3mb = 0xC00 bytes con lo cual va bien el offset. es segmento de lectura asi que piola
+	se transforma en la direccion lineal = 0x00100000 + 0x400 = 0x00100400
+
+	ahora la unidad de paginacion toma la direccion lineal 0x00100400 y separa los indices
+	offset = 0x400 = 1024
+	ptIndex = 512
+	pdIndex = 0
+	vuela porque no tiene presente la entrada 512 la tabla de paginas. Page Fault.
+
+;------------------------------------------------------------------------------------------------------------	
+
+	0x0002 : 0x00001000 - CPL 10 - lectura
+
+	segsel:
+		RPL = 01
+		LDT/GDT = GDT
+		offset = 0
+
+		accede a la entrada 0 de la GDT.  #GP unidad de segmentacion
+
+;------------------------------------------------------------------------------------------------------------	
+
+	0x0018 : 0x05000060 - CPL 00 - ejecucion
+
+	segsel:
+		RPL = 00
+		LDT/GDT = GDT
+		offset = 3
+
+	accedo al indice 3 de la GDT, tengo CPL 00 y es un segmento de nivel mayor, no puede ejecutar con privilegio mas bajo que el segmento #GP
+
+;------------------------------------------------------------------------------------------------------------	
+
+	0x004B : 0x00001000 - CPL 10 - ejecucion
+
+	segsel:
+		RPL = 11
+		LDT/GDT = GDT
+		offset = 1001 = 9d
+
+	accede al indice 9 de la GDT, tengo CPL 10 y es un segmento de nivel 3, no puede ejecutar con privilegio mas bajo que el segmento #GP
+
+;------------------------------------------------------------------------------------------------------------	
+
+ej 1.4
+
+	cual es el efecto que se produce en el sistema de traduccion de memoria de direcciones virtuales a fisicas en un SO que no habilita la linea A20 ?
+la direccion fisica termina con un 0 hardcodeado en el indice 20. pero que coño implica esto? si los bits mas significativos(21,22,23,24,...) tienen valores random
+dir fisica sin a20 = dir fisica - (dir[20]*2^20) 
+	
+
+	0x004B : 0x00001000 - CPL 10 - ejecucion
+
+	segsel:
+		RPL = 11
+		LDT/GDT = GDT
+		offset = 1001 = 9d
+
+	base = 0x0
+	limite = 0xDFFFF(granularidad 4k)
+
+	direccion efectiva = base (0x0) + offset(0x00001000) = 0x00001000 = 0000 0000 0000 0000 0001 0000 0000 0000 
+	si le anulo el bit 20, queda igual.
+
+
+;------------------------------------------------------------------------------------------------------------	
+
+ej2.a
+	IDT[50].attr = present + DPL 11 + 32 bits
+	IDT[50].segsel = selector de segmento de codigo de nivel 0
+	IDT[50].offset0_15 = (unsigned short int) (&isr_95);
+	IDT[50].offset16_31 = (unsigned short int) ( (&isr_95) >> 16 );	
+
+ej2.b
+
+	?
+
+ej2.c
+
+	void mmu_mapear_pagina_tarea(unsigned int cr3, unsigned int virtual, unsigned int fisica){
+		unsigned int pdIndex = virtual >> 22; tiro los primeros 22 bits.
+		unsigned int ptIndex = (virtual >> 12) & (0x03FF); tiro los primeros 12 bits y me quedo con los 10 bits menos significativos 
+
+		if(cr3[pdIndex].present == 0){
+			cr3[pdIndex].present = 1
+			cr3[pdIndex].readWrite = 1
+			cr3[pdIndex].userSupervisor = 1 //user
+			cr3[pdIndex].pageBase = mmu_dame_fisica_libre_kernel() >> 12;//esto me da 4096bytes que alcanza para almacenar toda una tabla de paginas justo
+			... resto de los bits de attr en 0 ...
+		}
+
+		pageTablePtr = cr3[pdIndex].pageBase << 12; viene alineada a 4k en 20 bits.
+
+		pageTablePtr[ptIndex].present = 1
+		pageTablePtr[ptIndex].readWrite = 1
+		pageTablePtr[ptIndex].userSupervisor = 1//user
+		pageTablePtr[ptIndex].pageBase = fisica >> 12; alineado a 4k
+		... asumo inicializado resto de los bits de la pageTableEntry[ptIndex] en 0 ...
+	}
+
+	typedef struct task_info{
+			unsigned int DATA_START;
+			unsigned int pageCount;
+			;DATA_END se calcula como DATA_START + 0x1000*pageCount
+		} task_info;
+
+	tareasData[CANT_MAX_TAREA] = {
+		[0] =  (task_info)	{
+				.DATA_START = ...;
+				.pageCount = 0;
+		},
+		...
+		,
+		[CANT_MAX_TAREA-1] =  (task_info)	{
+				.DATA_START = ...;
+				.pageCount = 0;
+		},
+	}
+
+	unsigned int incrementar(unsigned int byteCount){//asumiendo que byteCount es multiplo de 4k
+		unsigned int taskNumber = tarea_pid();
+		unsigned int taskContext = leer_cr3();
+		unsigned int pagesRequired = byteCount >> 12;
+		unsigned int pagesGot = 0;
+		unsigned int currentLimit = tareasData[taskNumber].DATA_START + (0x1000*tareasData[taskNumber].pageCount);
+
+		unsigned int newPageFisica = 0;
+		while( (pagesGot<pagesRequired) && ((newPageFisica = mmu_dame_fisica_libre_usuario())!= 0xFFFFFFFF)){
+			//tengo en newPageFisica una nueva dir fisica para mapear una nueva pagina a la tarea
+
+			//mapeo el limite actual a la pagina fisica obtenida y incremento el limite en una pagina.
+			mmu_mapear_pagina_tarea(taskContext, currentLimit, newPageFisica);
+			//aumento la cantidad de paginas nuevas en la estructura
+			tareasData[taskNumber].pageCount++;
+
+			pagesGot++;
+		}
+		
+		//devuelvo nuevo limite
+		return tareasData[taskNumber].DATA_START + (0x1000*tareasData[taskNumber].pageCount);
+		tlbflush();
+	}
+
+	isr_95:
+		pushad
+		pushfd
+
+		;unsigned int incrementar(unsigned int byteCount);
+
+		push eax
+		call incrementar
+		add esp, 4
+
+		popfd
+		popad
+		iret
+
+;------------------------------------------------------------------------------------------------------------	
+
+ej3.a
+
+La idea seria que las tareas se vayan cediendo el control entre ellas.
+
+La tarea U de nivel 3 podria indicar mediante una system call que ya termino y le retorna el control
+al kernel(tarea S). Esto produce un cambio de privilegio ya que las syscall se ejecutan en nivel 0, pero no se cambia el contexto.
+Se puede usar una puerta de tarea en la IDT con DPL 11, en la cual con una llamada desde la tarea U de nivel 3 a esta interrupcion, volvemos al kernel.
+
+La tarea S podria pasarle el contro a la tarea U en cualquier momento mediante un jmp far a su entrada de TSS de la GDT y
+esperar a que mediante la syscall la tarea devuelva el control al kernel
+
+Preguntas: 
+
+* con el jmp far, de kernel a tarea, cambias contexto y privilegio no?
+
+ej3.b
+	GDT, IDT, si se quiere, estructuras de paginacion, las TSS correspondientes a las 2 tareas
+
+	ademas de las entradas necesarias para el sistema basico(segm datos y codigo, manejo de excepciones, teclado, etc)
+
+	*	entrada de TSS para la tarea usuario en la GDT apuntando a la TSS de la tarea user(nivel 3) y la tarea de kernel apuntando a la TSS de la tarea system (nivel 0)
+	*	entrada para puerta de tarea con el selector de segmento que apunte al descriptor de tarea de la gdt de la tarea de nivel 0
+	*	las tss deberian contener el contexto correspondiente a las 2 tareas, en el primer salto, se setea en el TR el tss del kernel asi queda el contexto de este guardado alli.
+
+ej3.c
+	*	en el primer salto, hay que poner el segsel en tr de la tss de kernel
+	*	desde el kernel con hacer jmp xx:0 donde xx es el selector de segmento apuntando al indice en la gdt donde esta el descriptor de TSS de la tarea User se cambia el privilegio y contexto
+	*	desde la tarea para ir al kernel con hacer int xx donde xx es el indice de la puerta de tarea, se cambia automaticamente el contexto y privilegio a la tarea kernel.

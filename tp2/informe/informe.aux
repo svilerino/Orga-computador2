@@ -1,0 +1,80 @@
+\relax 
+\catcode`"\active
+\ifx\hyper@anchor\@undefined
+\global \let \oldcontentsline\contentsline
+\gdef \contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global \let \oldnewlabel\newlabel
+\gdef \newlabel#1#2{\newlabelxx{#1}#2}
+\gdef \newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\let \contentsline\oldcontentsline
+\let \newlabel\oldnewlabel}
+\else
+\global \let \hyper@last\relax 
+\fi
+
+\select@language{spanish}
+\@writefile{toc}{\select@language{spanish}}
+\@writefile{lof}{\select@language{spanish}}
+\@writefile{lot}{\select@language{spanish}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{3}{section.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Desarrollo}{3}{section.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Filtro Color}{3}{subsection.2.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}Descripci\IeC {\'o}n del algoritmo}{3}{subsubsection.2.1.1}}
+\@writefile{lol}{\contentsline {lstlisting}{fuentes/pseudocolor\textunderscore filter\textunderscore c.c}{3}{lstlisting.-1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2}Implementacion en assembler utilizando set de instrucciones SIMD}{5}{subsubsection.2.1.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Mascara de reordenamiento de canal azul}}{5}{figure.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Mascara de reordenamiento de canal verde}}{6}{figure.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Mascara de reordenamiento de canal rojo}}{6}{figure.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Mascara de reordenamiento inversa de canal azul}}{6}{figure.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Mascara de reordenamiento inversa de canal verde}}{6}{figure.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Mascara de reordenamiento inversa de canal rojo}}{6}{figure.6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Mascara de constante 3 como 4 puntos flotantes de precision simple}}{6}{figure.7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Mascara de constantes RC como 4 enteros de 4 bytes}}{6}{figure.8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Mascara de constantes BC como 4 enteros de 4 bytes}}{7}{figure.9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Mascara de constantes GC como 4 enteros de 4 bytes}}{7}{figure.10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces 4 floats empaquetados con el valor de $threshold^2$.}}{7}{figure.11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Obtenci\IeC {\'o}n de los 16 bytes (12 a procesar) en la iteraci\IeC {\'o}n actual.}}{7}{figure.12}}
+\newlabel{pixeles}{{12}{7}{Obtención de los 16 bytes (12 a procesar) en la iteración actual}{figure.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Contenido de los registros \texttt  {XMM 0,1,2} antes del reordenamiento}}{8}{figure.13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Contenido del registro \textbf  {AZUL} luego del reordenamiento con \textbf  {PSHUFB} con la mascara correspondiente}}{8}{figure.14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Contenido del registro \textbf  {VERDE} luego del reordenamiento con \textbf  {PSHUFB} con la mascara correspondiente}}{8}{figure.15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Contenido del registro \textbf  {ROJO} luego del reordenamiento con \textbf  {PSHUFB} con la mascara correspondiente}}{8}{figure.16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Resta empaquetada ilustrativa entre 1 registro de componentes rojas y su parametro rc. Analogamente son las restas empaquetadas entre las componentes verdes y azules y sus parametros.}}{8}{figure.17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Producto empaquetado de los registros por si mismos, de esta forma obtenemos las diferencias al cuadrado. Analogamente se realiza para las componentes verdes y azules.}}{9}{figure.18}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Suma de las distancias de las 3 componentes de los pixeles. De esta forma obtenemos la distancia euclidiana al cuadrado. Notar que la suma es ilustrativa, pues la suma se realiza en 2 etapas, ver codigo.}}{9}{figure.19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Ejemplo de comparaci\IeC {\'o}n lower than. Obtenemos una m\IeC {\'a}scara con 0xFFFFFFFF \IeC {\'o} 0x00000000 depediendo de si en esa posici\IeC {\'o}n, la suma de los cuadrados de las diferencias era menor o mayor o igual a threshold.}}{10}{figure.20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Nos quedan los valores rojos de los pixeles que no tienen que cambiar, y 0s donde habia un valor rojo de un pixel que tiene que ser convertido a blanco y negro}}{10}{figure.21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Obtenemos el promedio de las 3 componentes de cada pixel. Notar que este ejemplo es un caso en el cual todos los pixeles deben ser modificados}}{11}{figure.22}}
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Ya tenemos agrupadas y procesadas las componentes de los 4 pixeles. Lo \IeC {\'u}nico que queda ahora es hacer un reordenamiento de pixeles como el del principio, pero de manera inversa y finalmente escribir a destino el resultado}}{12}{figure.23}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.3}Optimizaciones y tecnicas especificas aplicadas a la implementacion con SIMD}{12}{subsubsection.2.1.3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.4}Analisis y resultados}{13}{subsubsection.2.1.4}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.5}Tiempos de ejecucion de diferentes experimentos}{13}{subsubsection.2.1.5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.6}Diferencias estructurales de las diferentes versiones analizadas}{15}{subsubsection.2.1.6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.7}Conclusiones acerca de las mediciones}{16}{subsubsection.2.1.7}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.8}Aclaraciones especiales respecto a los tests del fcolor}{17}{subsubsection.2.1.8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Miniatura}{18}{subsection.2.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}Descripcion del algoritmo}{18}{subsubsection.2.2.1}}
+\@writefile{lol}{\contentsline {lstlisting}{fuentes/pseudominiature\textunderscore filter\textunderscore c.c}{18}{lstlisting.-2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}Implementacion en C}{20}{subsubsection.2.2.2}}
+\@writefile{lol}{\contentsline {lstlisting}{fuentes/pseudo\textendash filtro\textendash mini.c}{20}{lstlisting.-3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3}Implementacion en assembler utilizando set de instrucciones SIMD}{21}{subsubsection.2.2.3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.4}Detalle de procesamiento de filtrado de a 3 pixeles}{24}{subsubsection.2.2.4}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.5}C vs Assembler con SIMD}{26}{subsubsection.2.2.5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.6}Tiempos de ejecucion de diferentes experimentos}{27}{subsubsection.2.2.6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.7}Comentarios sobre los resultados obtenidos del experimento}{27}{subsubsection.2.2.7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Decode}{28}{subsection.2.3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.1}Descripcion del algoritmo}{28}{subsubsection.2.3.1}}
+\@writefile{lol}{\contentsline {lstlisting}{fuentes/pseudodecode\textunderscore c.c}{28}{lstlisting.-4}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2}Implementacion en assembler utilizando set de instrucciones SIMD}{29}{subsubsection.2.3.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.3}Analisis}{29}{subsubsection.2.3.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces 00000011 replicado, para hacer AND y filtrar los ultimos 2 bits}}{29}{figure.24}}
+\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces 00001100 replicado, para hacer AND y filtrar el tercer y cuarto bit}}{30}{figure.25}}
+\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces para comparar los resultados y ver si es el op 0}}{30}{figure.26}}
+\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces para comparar los resultados y ver si es el op 1}}{30}{figure.27}}
+\@writefile{lof}{\contentsline {figure}{\numberline {28}{\ignorespaces para comparar los resultados y ver si es el op 2}}{30}{figure.28}}
+\@writefile{lof}{\contentsline {figure}{\numberline {29}{\ignorespaces para comparar los resultados y ver si es el op 3}}{30}{figure.29}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.4}Optimizaciones aplicadas al algoritmo}{33}{subsubsection.2.3.4}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.5}Analisis y rendimiento de las diferentes implementaciones}{34}{subsubsection.2.3.5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.6}Conclusiones de los resultados}{35}{subsubsection.2.3.6}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Conclusi\IeC {\'o}n}{35}{section.3}}
+\newlabel{LastPage}{{}{35}{}{page.35}{}}

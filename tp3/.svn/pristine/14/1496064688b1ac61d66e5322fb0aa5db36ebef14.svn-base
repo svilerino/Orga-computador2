@@ -1,0 +1,343 @@
+\documentclass[a4paper,10pt,twoside]{article}
+
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-ucroman,es-noquoting]{babel}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{verbatim}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{algorithmic}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.97,0.97,0.97}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.pathreplacing}
+
+
+% Evita que el documento se estire verticalmente para ocupar
+% el espacio vacío en cada página.
+\raggedbottom
+
+
+%%%%%%%%%% Configuración de Fancyhdr - Inicio %%%%%%%%%%
+\pagestyle{fancy}
+\thispagestyle{fancy}
+\lhead{Trabajo Práctico 3, Organización del Computador II}
+\rhead{Chapresto, Rey, Vileriño}
+\renewcommand{\footrulewidth}{0.4pt}
+\cfoot{\thepage /\pageref{LastPage}}
+
+\fancypagestyle{caratula} {
+   \fancyhf{}
+   \cfoot{\thepage /\pageref{LastPage}}
+   \renewcommand{\headrulewidth}{0pt}
+   \renewcommand{\footrulewidth}{0pt}
+}
+%%%%%%%%%% Configuración de Fancyhdr - Fin %%%%%%%%%%
+
+
+%%%%%%%%%% Configuración de Algorithmic - Inicio %%%%%%%%%%
+% Entorno propio para customizar la presentación del pseudocódigo
+\newenvironment{pseudocodigo}
+    {\vspace{0.5em} \begin{algorithmic}}
+    {\end{algorithmic} \vspace{0.5em}}
+
+% Alinear comentarios a la derecha
+\renewcommand{\algorithmiccomment}[1]{\hfill \{#1\}}
+%%%%%%%%%% Configuración de Algorithmic - Fin %%%%%%%%%%
+
+
+%%%%%%%%%% Macros de tikz - Inicio %%%%%%%%%%
+% Uso: \registroCuatro{etiqueta}{x}{y}{a4}{a3}{a2}{a1}
+\newcommand{\registroCuatro}[7]{
+    \ifthenelse{\equal{#1}{}}{}{
+        \draw (#2, {#3 + 0.5}) node[anchor=east]{#1};
+    }
+
+    \draw   (#2, #3) rectangle +(4, 1) +(2, 0.5) node{#4}
+          ++(4, 0)   rectangle +(4, 1) +(2, 0.5) node{#5}
+          ++(4, 0)   rectangle +(4, 1) +(2, 0.5) node{#6}
+          ++(4, 0)   rectangle +(4, 1) +(2, 0.5) node{#7};          
+}
+
+% Uso: \registroOcho{etiqueta}{x}{y}{a8}{a7}{a6}...{a1}
+\newcommand{\registroOcho}[9]{
+    \def\etiqueta{#1}
+    \def\x{#2}
+    \def\y{#3}
+    \def\aviii{#4}
+    \def\avii{#5}
+    \def\avi{#6}
+    \def\av{#7}
+    \def\aiv{#8}
+    \def\aiii{#9}
+    \registroOchoX    
+}
+\newcommand{\registroOchoX}[2]{ % Auxiliar - no usar directamente
+    \def\aii{#1}
+    \def\ai{#2}
+    \ifthenelse{\equal{\etiqueta}{}}{}{
+        \draw (\x, {\y + 0.5}) node[anchor=east]{\etiqueta};
+    }
+    \filldraw[fill=white]
+        (\x, \y) rectangle +(2, 1) +(1, 0.5) node{\aviii}
+        ++(2, 0) rectangle +(2, 1) +(1, 0.5) node{\avii}
+        ++(2, 0) rectangle +(2, 1) +(1, 0.5) node{\avi}
+        ++(2, 0) rectangle +(2, 1) +(1, 0.5) node{\av}
+        ++(2, 0) rectangle +(2, 1) +(1, 0.5) node{\aiv}
+        ++(2, 0) rectangle +(2, 1) +(1, 0.5) node{\aiii}
+        ++(2, 0) rectangle +(2, 1) +(1, 0.5) node{\aii}
+        ++(2, 0) rectangle +(2, 1) +(1, 0.5) node{\ai};
+}
+
+
+% Uso: \registroDieciseis{etiqueta}{x}{y}{a16}{a15}{a14}...{a1}
+\newcommand{\registroDieciseis}[9]{
+    \def\etiqueta{#1}
+    \def\x{#2}
+    \def\y{#3}
+    \def\axvi{#4}
+    \def\axv{#5}
+    \def\axiv{#6}
+    \def\axiii{#7}
+    \def\axii{#8}
+    \def\axi{#9}
+    \registroDieciseisX
+}
+\newcommand{\registroDieciseisX}[9]{ % Auxiliar - no usar directamente
+    \def\ax{#1}
+    \def\aix{#2}
+    \def\aviii{#3}
+    \def\avii{#4}
+    \def\avi{#5}
+    \def\av{#6}
+    \def\aiv{#7}
+    \def\aiii{#8}
+    \def\aii{#9}
+    \registroDieciseisXX
+}
+\newcommand{\registroDieciseisXX}[1]{ % Auxiliar - no usar directamente
+    \def\ai{#1}
+    \ifthenelse{\equal{\etiqueta}{}}{}{
+        \draw (\x, {\y + 0.5}) node[anchor=east]{\etiqueta};
+    }
+    \filldraw[fill=white]
+        (\x, \y) rectangle +(1, 1) +(0.5, 0.5) node{\axvi}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\axv}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\axiv}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\axiii}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\axii}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\axi}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\ax}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\aix}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\aviii}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\avii}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\avi}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\av}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\aiv}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\aiii}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\aii}
+        ++(1, 0) rectangle +(1, 1) +(0.5, 0.5) node{\ai};
+}
+%%%%%%%%%% Macros de tikz - Fin %%%%%%%%%%
+
+
+%%%%%%%%%% Macros misceláneos - Inicio %%%%%%%%%%
+\newcommand{\xmm}[1]{\texttt{XMM#1}}
+\newcommand{\rax}{\texttt{RAX}}
+\newcommand{\rbx}{\texttt{RBX}}
+\newcommand{\rcx}{\texttt{RCX}}
+\newcommand{\rdx}{\texttt{RDX}}
+\newcommand{\rbp}{\texttt{RBP}}
+\newcommand{\rsp}{\texttt{RSP}}
+\newcommand{\reg}[1]{\texttt{R#1}}
+\newcommand{\asm}[1]{\texttt{\uppercase{#1}}}
+%%%%%%%%%% Macros misceláneos - Fin %%%%%%%%%%
+
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Carátula                                                                  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\thispagestyle{caratula}
+
+\begin{center}
+
+\includegraphics[height=2cm]{DC.png} 
+\hfill
+\includegraphics[height=2cm]{UBA.jpg} 
+
+\vspace{2cm}
+
+Departamento de Computación,\\
+Facultad de Ciencias Exactas y Naturales,\\
+Universidad de Buenos Aires
+
+\vspace{4cm}
+
+\begin{Huge}
+Trabajo Práctico 3
+\end{Huge}
+
+\vspace{0.5cm}
+
+\begin{Large}
+Organización del Computador II
+\end{Large}
+
+\vspace{1cm}
+
+Segundo Cuatrimestre de 2013
+
+\vspace{4cm}
+
+Grupo: \textbf{Crema Americana/Persico}
+
+\vspace{0.5cm}
+
+\begin{tabular}{|c|c|c|}
+    \hline
+    Apellido y Nombre & LU & E-mail\\
+    \hline
+    Silvio Vileriño             & 106/12 & svilerino@gmail.com\\
+    Esteban Rey 				& 657/10 & estebanlucianorey@gmail.com\\
+    Matias Chapresto 			& 201/12 & matiaschapresto@gmail.com\\
+    \hline
+\end{tabular}
+
+\vspace{1cm}
+
+
+\end{center}
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Índice                                                                    %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\tableofcontents
+
+\newpage
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Introduccion                                                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Introduccion}
+En el siguiente informe se detallara el armado del kernel de nuestro trabajo practico. El mismo fue separado en secciones respecto a la funcionalidad de las mismas: asi es como se tiene la unidad de manejo de memoria, la de atencion de interrupciones, inicializacion de tareas, control de pantalla...etc.\\
+Dado que dichos modulos deben trabajar en conjunto, se debio estableces cierto diseño para evitar caer en un desorden absoluto de codigo. De esta forma se resolvio implementar un modelo de capas, separando las distintas partes segun el tipo de datos que cada una utilizaba e aislandola de las demas. Estas capas son unidas por un 'controlador' principal, el cual se encarga de guardar los datos principales del kernel de forma sencilla para que cada modulo pueda acceder a lo que necesita.\\
+El separamiento tambien nos proveyo a la hora de desarrollo, en una forma sencilla de organizar el trabajo en grupo, ya que, con solo establecer la interfaz entre modulos, pudimos separar de forma eficiente la escritura del codigo.\\
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Desarrollo                                                                %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Desarrollo}
+
+\subsection{Arquitectura general del sistema}
+
+
+
+\input{arquitecturaGeneral}
+
+\subsection{Paginacion y memoria virtual 1: Modelo de paginacion identity mapping para tierra y mar }
+
+\input{paginacionymv1}
+
+\subsection{Paginacion y memoria virtual 2: Modelo de paginacion para la tarea y idle y las 8 tareas concurrentes }
+
+\input{paginacionymv2}
+
+\subsection{Memory Managment Unit: Overview. Diseño general y funcionalidades brindadas al kernel y a las tareas}
+
+\input{mmu}
+
+\subsection{Interrupciones y Excepciones: Modelos de notificacion y penalizaciones por fallas algoritmicas}
+
+\input{interrupcionesYExcep}
+
+\subsection{Interrupciones del sistema 1: Delegacion e integracion en dos niveles C assembler para brindar las interrupciones de software como servicios del sistema}
+
+\input{interrupcionesSistema1}
+
+\subsection{Interrupciones del sistema 2: Implementacion. Integracion entre servicios del sistema y MMU. Mecanismos de notificacion}
+
+\input{interrupcionesSistema2}
+
+\subsection{Manejador de Contexto 1: Funcionalidades y controles delegados sobre este modulo}
+
+\input{manejadorContexto1}
+
+\subsection{Manejador de Contexto 2: Diseño, Modelo de notificaciones en cascada por niveles de abstraccion}
+
+\input{manejadorContexto2}
+
+\subsection{Manejador de Contexto 3: Mecanismos de notificacion entre los diferentes modulos y su correcta integracion entre niveles}
+
+\input{manejadorContexto3}
+
+\subsection{Manejador de Contexto 4: Mecanismos de actualizacion de buffers de video, volcados parciales y totales a memoria de video de la pantalla seleccionada.}
+
+\input{manejadorContexto4}
+
+\subsection{Pantalla Estado: Division en Secciones: Banderas - Ultimo crash del sistema - Listado de informacion de paginacion. Mecanismos de actualizacion de informacion}
+
+\input{pantallaEstado}
+
+\subsection{Pantalla Mapa: Tierra y Mar. Referencias del mapa. }
+
+\input{pantallaMapa}
+
+\subsection{Manejador de Contexto 5: Estructuras de datos y algoritmos utilizados para calculo de intersecciones e identificacion de paginas mapeadas por las tareas.}
+
+\input{manejadorContexto5}
+
+\subsection{Barra de relojes: Diseño. Modelo de notificaciones.}
+
+\input{barraRelojes}
+
+\subsection{Tareas 1: Carga de tareas, Contexto de una tarea, Cambio de Contexto entre tareas y su implementacion. }
+
+\input{tareas1}
+
+\subsection{Tareas 2: Banderas. Identificacion de una tarea. Penalizacion de tiempo de scheduler en la llamada a bandera. Signal al sistema por interrupcion fin de bandera. Animacion de banderas}
+
+\input{tareas2}
+
+\subsection{Tareas 3: Scheduler: Ejecucion concurrente de tareas. Turnos. Implementacion e integracion con Manejador de contexto.}
+
+\input{tareas3}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Conclusión                                                                %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Conclusión}
+Bla
+
+
+\end{document}
