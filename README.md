@@ -16,7 +16,7 @@ Below are described the syscalls
   * Fire a byte bullet: this syscall allowed a task to write an arbitrary number of bytes stored in a buffer of its own to any part of the physical "sea" memory. This could be seen as "attacking" another tasks.
 
 * Protection, memory areas(sea and ground, etc)
-  Physical memory was divided in 2, "ground" memory, which was were the kernel stored all its structures and "sea" memory, which was were all the tasks were stored. Any attempt of a task to write into kernel "ground" memory would come into a General Protection exception, this was achieved using different segments in the GDT with different ring permissions. Tasks run in ring 3, and kernel run in ring 0.
+  Physical memory was divided in 2, "ground" memory, which was were the kernel stored all its structures and "sea" memory, which was were all the tasks were stored. Any attempt of a task to write into kernel "ground" memory would come into a General Protection exception. Tasks run in ring 3, and kernel run in ring 0.
 
 The information above was only a brief description, to see more in detail how this project works please look at the code or both the project specification(enunciado) PDF, and the report(informe) explaining in detail how the kernel was designed and implemented the requirements.
   
