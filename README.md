@@ -17,9 +17,11 @@ Below are described the syscalls
 
 * Protection, memory areas(sea and ground, etc)
   Physical memory was divided in 2, "ground" memory, which was were the kernel stored all its structures and "sea" memory, which was were all the tasks were stored. Any attempt of a task to write into kernel "ground" memory would come into a General Protection exception, this was achieved using different segments in the GDT with different ring permissions. Tasks run in ring 3, and kernel run in ring 0.
+
+The information above was only a brief description, to see more in detail how this project works please look at the code or both the project specification(enunciado) PDF, and the report(informe) explaining in detail how the kernel was designed and implemented the requirements.
   
 
-Aditionally i've been part of another project as an extension of TP3. The information about that project is here:
+Aditionally i've been part of another project as an extension of TP3 which expanded the kernel to 64 bits and initialized multicore in order to make performance experiments. The information about that project is here:
 https://github.com/Izikiel/intel_multicore
 
   
